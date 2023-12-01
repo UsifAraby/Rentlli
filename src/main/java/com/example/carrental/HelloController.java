@@ -10,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -19,10 +20,22 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
+
+
+
+
+
+
     @FXML
     private Label welcomeText;
     @FXML
     private AnchorPane rootPane;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    @FXML
+    TextField firstname;
+
 
 
 
@@ -37,6 +50,12 @@ public class HelloController implements Initializable {
     }
 
     public void makefadeout(){
+
+
+
+        Customer c1=new Customer();
+        c1.first_Name= firstname.getText();
+        System.out.println(c1.first_Name);
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(rootPane);
@@ -53,9 +72,7 @@ public class HelloController implements Initializable {
         fadeTransition.play();
 
     }
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
 
     public void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));

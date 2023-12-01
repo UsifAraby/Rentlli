@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eca6564-173d-4668-ba76-f64b25a3a610" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/buttons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/loginScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/textfields.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "sasa",
     "last_opened_file_path": "E:/java OOP/HelloFx"
   }
 }]]></component>
