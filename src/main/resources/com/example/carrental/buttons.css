@@ -1,0 +1,42 @@
+
+#signupButtonLogin
+{
+
+    -fx-background-color : transparent;
+
+
+}
+
+#signupButtonLogin:hover
+{
+
+    -fx-background-color : #030405;
+
+
+}
+
+
+.button
+{
+
+    -fx-background-color : rgb(51, 149, 255);
+    -fx-background-radius : 30 30 30 30 ;
+
+}
+
+.button:hover
+{
+
+    -fx-background-color : rgb(23, 96, 175);
+    -fx-background-radius : 30 30 30 30 ;
+
+}
+
+.button:pressed
+{
+
+       -fx-background-color : rgb(51, 149, 255);
+       -fx-background-radius : 30 30 30 30 ;
+
+}
+
