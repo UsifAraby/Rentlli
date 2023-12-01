@@ -16,6 +16,9 @@ abstract public class User {
 
     }
 
+    protected User() {
+    }
+
     public String getFirst_Name() {
         return first_Name;
     }
