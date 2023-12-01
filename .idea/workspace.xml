@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5eca6564-173d-4668-ba76-f64b25a3a610" name="Changes" comment="init commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "sasa",
     "last_opened_file_path": "E:/java OOP/HelloFx"
   }
 }]]></component>
@@ -81,15 +83,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701390766202</updated>
     </task>
-    <task id="LOCAL-00004" summary="init commit">
-      <option name="closed" value="true" />
-      <created>1701460611799</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701460611799</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

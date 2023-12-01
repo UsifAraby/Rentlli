@@ -20,7 +20,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <TextField cache="true" layoutX="808.0" layoutY="181.0" prefHeight="26.0" prefWidth="363.0" promptText="FirstName" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="firstname" cache="true" layoutX="808.0" layoutY="181.0" prefHeight="26.0" prefWidth="363.0" promptText="FirstName" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
