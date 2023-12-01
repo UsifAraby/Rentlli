@@ -19,10 +19,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
+
+
+
+
     @FXML
     private Label welcomeText;
     @FXML
     private AnchorPane rootPane;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
 
@@ -53,9 +60,6 @@ public class HelloController implements Initializable {
         fadeTransition.play();
 
     }
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     public void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
