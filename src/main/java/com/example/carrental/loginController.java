@@ -2,14 +2,11 @@ package com.example.carrental;
 
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -18,21 +15,29 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class loginController implements Initializable {
     @FXML
-    private Label welcomeText;
-    @FXML
-    private AnchorPane rootPane;
+    public AnchorPane rootPane;
 
-
-
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+                rootPane.setOpacity(0);
+                makeFadeInTransition();
     }
 
-    public void signuptrans(ActionEvent event) throws IOException {
+    public void makeFadeInTransition() {
+
+            FadeTransition fadeTransition = new FadeTransition();
+            fadeTransition.setDuration(Duration.millis(1000));
+            fadeTransition.setNode(rootPane);
+            fadeTransition.setFromValue(0);
+            fadeTransition.setToValue(1);
+            fadeTransition.play();
+
+    }
+
+
+    public void signuptrans2(ActionEvent event) throws IOException {
         makefadeout();
     }
 
@@ -58,7 +63,7 @@ public class HelloController implements Initializable {
     private Parent root;
 
     public void loadNextScene() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
         root = loader.load();
         stage = (Stage) rootPane.getScene().getWindow();
         scene = new Scene(root);
@@ -66,20 +71,7 @@ public class HelloController implements Initializable {
         stage.show();
     }
 
-    public void makeFadeInTransition() {
 
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
-        fadeTransition.setNode(rootPane);
-        fadeTransition.setFromValue(0);
-        fadeTransition.setToValue(1);
-        fadeTransition.play();
 
-    }
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-                rootPane.setOpacity(0);
-                makeFadeInTransition();
-    }
+
 }
