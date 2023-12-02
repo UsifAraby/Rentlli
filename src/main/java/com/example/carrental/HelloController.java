@@ -15,16 +15,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
-
-
-
-
-
 
     @FXML
     private Label welcomeText;
@@ -35,10 +32,15 @@ public class HelloController implements Initializable {
     private Parent root;
     @FXML
     TextField firstname;
+    @FXML
+    TextField lastname;
+    @FXML
+    TextField email;
+    @FXML
+    TextField phonenumber;
 
 
-
-
+    Customer c1=new Customer();
 
     @FXML
     protected void onHelloButtonClick() {
@@ -47,15 +49,16 @@ public class HelloController implements Initializable {
 
     public void signuptrans(ActionEvent event) throws IOException {
         makefadeout();
+        signupInfo();
+        BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt",true));
+        writer.write(c1.toString());
+        writer.newLine();
+        writer.close();
     }
+
 
     public void makefadeout(){
 
-
-
-        Customer c1=new Customer();
-        c1.first_Name= firstname.getText();
-        System.out.println(c1.first_Name);
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(rootPane);
@@ -99,4 +102,6 @@ public class HelloController implements Initializable {
                 rootPane.setOpacity(0);
                 makeFadeInTransition();
     }
+
+
 }

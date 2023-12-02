@@ -4,9 +4,9 @@ package com.example.carrental;
 abstract public class User {
     protected String first_Name;
     protected String last_Name;
-    protected int phone_Number;
+    protected String phone_Number;
     protected String email_Adress;
-    public User (String first_Name,String last_Name,String email_Adress,int phone_Number) {
+    public User (String first_Name,String last_Name,String email_Adress,String phone_Number) {
 
         this.first_Name=first_Name;
         this.last_Name=last_Name;
@@ -19,6 +19,22 @@ abstract public class User {
     protected User() {
     }
 
+    public void setFirst_Name(String first_Name) {
+        this.first_Name = first_Name;
+    }
+
+    public void setLast_Name(String last_Name) {
+        this.last_Name = last_Name;
+    }
+
+    public void setPhone_Number(String phone_Number) {
+        this.phone_Number = phone_Number;
+    }
+
+    public void setEmail_Adress(String email_Adress) {
+        this.email_Adress = email_Adress;
+    }
+
     public String getFirst_Name() {
         return first_Name;
     }
@@ -27,7 +43,7 @@ abstract public class User {
         return last_Name;
     }
 
-    public int getPhone_Number() {
+    public String getPhone_Number() {
         return phone_Number;
     }
 
