@@ -1,6 +1,8 @@
 package com.example.carrental;
 
+
 import javafx.animation.FadeTransition;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -34,28 +36,38 @@ public class HelloController implements Initializable {
     private Scene scene;
     private Parent root;
     @FXML
-    TextField firstname;
-
-
-
-
-
+    TextField firstname ,lastname,email,password,phone_number,driver_license;
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
     public void signuptrans(ActionEvent event) throws IOException {
-        makefadeout();
+
+       if (validateInputs_Signup()) {
+           makefadeout();
+           sign_Info();
+       }
+    }
+
+    private boolean validateInputs_Signup() {
+
+        return !firstname.getText().isEmpty() && !lastname.getText().isEmpty()
+                && !email.getText().isEmpty() && !password.getText().isEmpty()
+                && !phone_number.getText().isEmpty() && !driver_license.getText().isEmpty();
+    }
+    private boolean validateInputs_Login(){
+
+
+
+        return !email.getText().isEmpty()&&!password.getText().isEmpty();
     }
 
     public void makefadeout(){
 
 
 
-        Customer c1=new Customer();
-        c1.first_Name= firstname.getText();
-        System.out.println(c1.first_Name);
+
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(rootPane);
@@ -73,6 +85,14 @@ public class HelloController implements Initializable {
 
     }
 
+public void sign_Info(){
+    Customer c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),phone_number.getText(),driver_license.getText(),password.getText());
+    System.out.println(c1.first_Name+c1.last_Name+c1.email_Adress+c1.password+c1.phone_Number+c1.license);
+
+
+
+
+}
 
     public void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
