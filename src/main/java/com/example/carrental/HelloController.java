@@ -17,6 +17,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -49,6 +51,8 @@ public class HelloController implements Initializable {
            sign_Info();
        }
     }
+
+
 
     private boolean validateInputs_Signup() {
 
@@ -85,14 +89,17 @@ public class HelloController implements Initializable {
 
     }
 
-public void sign_Info(){
+public void sign_Info() throws IOException {
     Customer c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),phone_number.getText(),driver_license.getText(),password.getText());
     System.out.println(c1.first_Name+c1.last_Name+c1.email_Adress+c1.password+c1.phone_Number+c1.license);
 
-
-
-
+    BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt",true));
+    writer.write(c1.toString());
+    writer.newLine();
+    writer.close();
 }
+
+
 
     public void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
