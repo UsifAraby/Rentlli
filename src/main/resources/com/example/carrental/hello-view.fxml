@@ -35,12 +35,12 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="phonenumber" cache="true" layoutX="808.0" layoutY="517.0" prefHeight="26.0" prefWidth="363.0" promptText="PhoneNumber" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="phone_number" cache="true" layoutX="808.0" layoutY="517.0" prefHeight="26.0" prefWidth="363.0" promptText="PhoneNumber" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="driverlicense" cache="true" layoutX="808.0" layoutY="602.0" prefHeight="26.0" prefWidth="363.0" promptText="Driver'sLicense" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="driver_license" cache="true" layoutX="808.0" layoutY="602.0" prefHeight="26.0" prefWidth="363.0" promptText="Driver'sLicense" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>

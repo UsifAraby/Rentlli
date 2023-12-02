@@ -1,6 +1,8 @@
 package com.example.carrental;
 
+
 import javafx.animation.FadeTransition;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -15,13 +17,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
+
+
+
+
+
 
     @FXML
     private Label welcomeText;
@@ -31,33 +36,37 @@ public class HelloController implements Initializable {
     private Scene scene;
     private Parent root;
     @FXML
-    TextField firstname;
-    @FXML
-    TextField lastname;
-    @FXML
-    TextField email;
-    @FXML
-    TextField phonenumber;
-
-
-    Customer c1=new Customer();
-
+    TextField firstname ,lastname,email,password,phone_number,driver_license;
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
     public void signuptrans(ActionEvent event) throws IOException {
-        makefadeout();
-        signupInfo();
-        BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt",true));
-        writer.write(c1.toString());
-        writer.newLine();
-        writer.close();
+
+       if (validateInputs_Signup()) {
+           makefadeout();
+           sign_Info();
+       }
     }
 
+    private boolean validateInputs_Signup() {
+
+        return !firstname.getText().isEmpty() && !lastname.getText().isEmpty()
+                && !email.getText().isEmpty() && !password.getText().isEmpty()
+                && !phone_number.getText().isEmpty() && !driver_license.getText().isEmpty();
+    }
+    private boolean validateInputs_Login(){
+
+
+
+        return !email.getText().isEmpty()&&!password.getText().isEmpty();
+    }
 
     public void makefadeout(){
+
+
+
 
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
@@ -76,6 +85,14 @@ public class HelloController implements Initializable {
 
     }
 
+public void sign_Info(){
+    Customer c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),phone_number.getText(),driver_license.getText(),password.getText());
+    System.out.println(c1.first_Name+c1.last_Name+c1.email_Adress+c1.password+c1.phone_Number+c1.license);
+
+
+
+
+}
 
     public void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
@@ -102,6 +119,4 @@ public class HelloController implements Initializable {
                 rootPane.setOpacity(0);
                 makeFadeInTransition();
     }
-
-
 }
