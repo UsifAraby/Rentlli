@@ -9,21 +9,21 @@ public class Customer extends User {
 
     final int costumer_ID;
 
-
+    String license;
     public Customer(){
-        cid++;
+
         costumer_ID=cid;
-
+        cid++;
     }
-    public Customer(String first_Name, String last_Name, String email_Adress, int phone_Number) {
+    public Customer(String first_Name, String last_Name, String email_Adress, String phone_Number,String license,String password) {
 
-        super(first_Name, last_Name, email_Adress, phone_Number);
+        super(first_Name, last_Name, email_Adress, phone_Number,password);
         costumer_ID = cid;
         cid++;
+        this.license=license;
     }
 
-
-    public int getCostumer_ID() {
-        return costumer_ID;
+    public void setLicense(String license) {
+        this.license = license;
     }
 }
