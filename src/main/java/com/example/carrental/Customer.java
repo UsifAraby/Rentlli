@@ -26,4 +26,13 @@ public class Customer extends User {
     public void setLicense(String license) {
         this.license = license;
     }
+
+
+
+    @Override
+    public String toString() {
+
+        return  first_Name + "\n" + last_Name + "\n" + email_Adress+ "," +password +"\n" +phone_Number+"\n" + license+"\n";
+    }
+
 }
