@@ -27,10 +27,12 @@ public class Customer extends User {
         this.license = license;
     }
 
+
+
     @Override
     public String toString() {
 
-        return  first_Name + "\n" + last_Name + "\n" + email_Adress+ "\n"+password +"\n" +phone_Number+"\n" + license+"\n";
+        return  first_Name + "\n" + last_Name + "\n" + email_Adress+ "," +password +"\n" +phone_Number+"\n" + license+"\n";
     }
 
 }

@@ -11,15 +11,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,8 +26,8 @@ public class HelloController implements Initializable {
 
 
 
-
-
+    public String file = "customers.txt";
+    public boolean signed ;
 
     @FXML
     private Label welcomeText;
@@ -44,12 +43,37 @@ public class HelloController implements Initializable {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
-    public void signuptrans(ActionEvent event) throws IOException {
+    Alert ERROR = new Alert(Alert.AlertType.ERROR);
 
-       if (validateInputs_Signup()) {
-           makefadeout();
-           sign_Info();
-       }
+    loginController x = new loginController();
+
+    public Customer c1;
+    public void sign_Info() throws IOException {
+         c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),phone_number.getText(),driver_license.getText(),password.getText());
+    }
+    public void signuptrans(ActionEvent event) throws IOException {
+        if (validateInputs_Signup()) {
+        signed= x.readCustomers(email.getText(),password.getText());
+        if (!signed) {
+
+            makefadeout();
+            sign_Info();
+            writeCustomers(c1);
+        }
+             else{
+                    ERROR.setTitle("ERROR");
+                    ERROR.setHeaderText("User Already Exist!");
+                    ERROR.setContentText("Click Ok To Continue: ");
+                    ERROR.showAndWait();
+            }
+        }
+        else {
+            ERROR.setTitle("ERROR");
+            ERROR.setHeaderText("Make Sure To Enter All the Infromation!");
+            ERROR.setContentText("Click Ok To Continue: ");
+            ERROR.showAndWait();
+
+        }
     }
 
 
@@ -60,17 +84,9 @@ public class HelloController implements Initializable {
                 && !email.getText().isEmpty() && !password.getText().isEmpty()
                 && !phone_number.getText().isEmpty() && !driver_license.getText().isEmpty();
     }
-    private boolean validateInputs_Login(){
 
-
-
-        return !email.getText().isEmpty()&&!password.getText().isEmpty();
-    }
 
     public void makefadeout(){
-
-
-
 
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
@@ -89,15 +105,15 @@ public class HelloController implements Initializable {
 
     }
 
-public void sign_Info() throws IOException {
-    Customer c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),phone_number.getText(),driver_license.getText(),password.getText());
-    System.out.println(c1.first_Name+c1.last_Name+c1.email_Adress+c1.password+c1.phone_Number+c1.license);
 
-    BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt",true));
-    writer.write(c1.toString());
-    writer.newLine();
-    writer.close();
-}
+
+    public void writeCustomers(Customer c) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
+        writer.write(c.toString());
+        writer.newLine();
+        writer.close();
+
+    }
 
 
 
