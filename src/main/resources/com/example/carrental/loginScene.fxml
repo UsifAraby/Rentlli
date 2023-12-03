@@ -15,17 +15,17 @@
             <Image url="@../../../login%20screen%20small.jpg" />
          </image>
       </ImageView>
-      <TextField cache="true" layoutX="812.0" layoutY="374.0" prefHeight="26.0" prefWidth="363.0" promptText="EMail" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="email" cache="true" layoutX="812.0" layoutY="374.0" prefHeight="26.0" prefWidth="363.0" promptText="EMail" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="812.0" layoutY="474.0" opacity="0.96" prefHeight="26.0" prefWidth="363.0" promptText="Password" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <PasswordField fx:id="password" layoutX="812.0" layoutY="474.0" opacity="0.96" prefHeight="26.0" prefWidth="363.0" promptText="Password" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </PasswordField>
-      <Button fx:id="LoginButton" layoutX="1076.0" layoutY="553.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="121.0" stylesheets="@buttons.css" text="Login" textFill="WHITE">
+      <Button fx:id="LoginButton" layoutX="1076.0" layoutY="553.0" mnemonicParsing="false" onAction="#logintrans" prefHeight="58.0" prefWidth="121.0" stylesheets="@buttons.css" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
