@@ -2,13 +2,10 @@ package com.example.carrental;
 
 
 import javafx.animation.FadeTransition;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -22,7 +19,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class SignupController implements Initializable {
 
 
 
@@ -45,22 +42,20 @@ public class HelloController implements Initializable {
 
     Alert ERROR = new Alert(Alert.AlertType.ERROR);
 
-    loginController x = new loginController();
+
 
     public Customer c1;
     public void sign_Info() throws IOException {
-         c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),phone_number.getText(),driver_license.getText(),password.getText());
+         c1=new Customer(firstname.getText(),lastname.getText(),email.getText(),password.getText(),phone_number.getText(),driver_license.getText());
     }
     public void signuptrans(ActionEvent event) throws IOException {
         if (validateInputs_Signup()) {
-        signed= x.readCustomers(email.getText(),password.getText());
+        signed= (ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()));
         if (!signed) {
-
-            makefadeout();
-            sign_Info();
-            writeCustomers(c1);
+                makefadeout();
+                ReadWriteData.customerContents.add(c1);
         }
-             else{
+             else if(signed){
                     ERROR.setTitle("ERROR");
                     ERROR.setHeaderText("User Already Exist!");
                     ERROR.setContentText("Click Ok To Continue: ");
@@ -107,13 +102,6 @@ public class HelloController implements Initializable {
 
 
 
-    public void writeCustomers(Customer c) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
-        writer.write(c.toString());
-        writer.newLine();
-        writer.close();
-
-    }
 
 
 
