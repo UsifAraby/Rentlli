@@ -35,7 +35,7 @@ public class ReadWriteData {
     // Write the contents of the customerContents list to a file
     public static void writeCustomersToFile() throws IOException{
         String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filepath, true));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
         System.out.println("writing...");
         for (Customer customer : customerContents) {
             writer.write(customer.toString());
@@ -56,7 +56,5 @@ public class ReadWriteData {
         return customerContents.stream()
                 .anyMatch(customer -> customer.getPassword().equals(password));
     }
-
-
 
 }

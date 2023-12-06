@@ -1,6 +1,7 @@
 package com.example.carrental;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -28,22 +29,14 @@ public class Main extends Application {
             throw new RuntimeException(e);
         }
 
-
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-
             try {
                 ReadWriteData.writeCustomersToFile();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
             System.out.println("Program is closing. Performing cleanup actions...");
-
         }));
-
-
-
-
-
 
         }
     }
