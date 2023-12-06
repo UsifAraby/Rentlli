@@ -20,9 +20,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.time.format.TextStyle;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
+
 
     public String file = "customers.txt";
     public String homeScene = "HomePage.fxml";

@@ -36,6 +36,10 @@ abstract public class User {
         this.email_Adress = email_Adress;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     protected User() {
     }
 
