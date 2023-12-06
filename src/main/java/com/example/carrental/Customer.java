@@ -15,9 +15,9 @@ public class Customer extends User {
         costumer_ID=cid;
         cid++;
     }
-    public Customer(String first_Name, String last_Name, String email_Adress, String phone_Number,String license,String password) {
+    public Customer(String first_Name, String last_Name, String email_Adress,String password, String phone_Number,String license) {
 
-        super(first_Name, last_Name, email_Adress, phone_Number,password);
+        super(first_Name, last_Name, email_Adress,password, phone_Number);
         costumer_ID = cid;
         cid++;
         this.license=license;
@@ -31,8 +31,8 @@ public class Customer extends User {
 
     @Override
     public String toString() {
-
-        return  first_Name + "\n" + last_Name + "\n" + email_Adress+ "," +password +"\n" +phone_Number+"\n" + license+"\n";
+        return first_Name + "," + last_Name + "," + email_Adress + "," + password + "," + phone_Number + "," + license + "\n";
     }
+
 
 }

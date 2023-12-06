@@ -45,7 +45,7 @@ public class loginController implements Initializable {
 
     Alert ERROR = new Alert(Alert.AlertType.ERROR);
 
-
+/*
     public boolean readCustomers(String email,String passwd) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line;
@@ -56,7 +56,7 @@ public class loginController implements Initializable {
             }
         }
             return false;
-    }
+    }*/
 
     public void makeFadeInTransition() {
 
@@ -75,8 +75,8 @@ public class loginController implements Initializable {
 
     public void logintrans(ActionEvent event) throws IOException {
         if (validateInputs_Login()) {
-            logged = readCustomers(email.getText(), password.getText());
-            if (logged) {
+
+            if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
                 makefadeout(homeScene);
                 System.out.println("logged in succefully!");
             }
