@@ -19,7 +19,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="-2.0" layoutY="327.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="car Agencys                         &gt;" textFill="WHITE">
+      <Button layoutX="-2.0" layoutY="327.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Car Agencys                         &gt;" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
