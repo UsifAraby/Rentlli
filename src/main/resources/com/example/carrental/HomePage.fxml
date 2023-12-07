@@ -62,12 +62,12 @@
       </ImageView>
       <ImageView fx:id="car5" fitHeight="178.0" fitWidth="242.0" layoutX="698.0" layoutY="522.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../am886@3%20(1).png" />
+            <Image url="@../../../am886@3.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="car6" fitHeight="140.0" fitWidth="209.0" layoutX="1040.0" layoutY="533.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="car6" fitHeight="169.0" fitWidth="235.0" layoutX="1030.0" layoutY="516.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../pngimg.com%20-%20aston_martin_PNG24.png" />
+            <Image url="@../../../am688@3.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="153.0" fitWidth="881.0" layoutX="367.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">

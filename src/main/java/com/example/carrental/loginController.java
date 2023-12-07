@@ -66,7 +66,6 @@ public class loginController implements Initializable {
             fadeTransition.setFromValue(0);
             fadeTransition.setToValue(1);
             fadeTransition.play();
-
     }
 
     private boolean validateInputs_Login(){
