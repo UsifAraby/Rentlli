@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.carAgencysControll">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../homepage%20small%20layout.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="18.0" layoutY="257.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Personal information           &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="18.0" layoutY="347.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="car Agencys                         &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="19.0" layoutY="430.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Reservation History             &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="20.0" layoutY="504.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Compare Cars                     &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" layoutX="385.0" layoutY="286.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100; -fx-scale-x: 1; -fx-scale-y: 1;" width="235.0" />
+      <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" layoutX="728.0" layoutY="286.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" />
+      <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" layoutX="1038.0" layoutY="286.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" />
+      <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="100.0" layoutX="385.0" layoutY="113.0" onDragDetected="#Hover" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" />
+      <ImageView fx:id="car1" fitHeight="160.0" fitWidth="242.0" layoutX="385.0" layoutY="337.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../hghf.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="car3" fitHeight="178.0" fitWidth="242.0" layoutX="1038.0" layoutY="329.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../jhtoihth.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="car2" fitHeight="167.0" fitWidth="289.0" layoutX="701.0" layoutY="332.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fdgdg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="153.0" fitWidth="881.0" layoutX="387.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../searchbar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="94.0" fitWidth="181.0" layoutX="-9.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../user%20icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="94.0" fitWidth="100.0" layoutX="387.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ghhd.png" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="ChoiceBox" layoutX="322.0" layoutY="366.0" onDragDetected="#getcarAgency" opacity="0.0" prefWidth="150.0" />
+      <Label fx:id="carAgencyName" layoutX="397.0" layoutY="99.0" opacity="0.0" prefHeight="129.0" prefWidth="256.0" text="ELGOHARY">
+         <font>
+            <Font name="Agency FB Bold" size="62.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="474.0" text="100$">
+         <font>
+            <Font name="29LT Bukra Light" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="1059.0" layoutY="468.0" text="300$">
+         <font>
+            <Font name="29LT Bukra Light" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="753.0" layoutY="468.0" text="200$">
+         <font>
+            <Font name="29LT Bukra Light" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="696.0" layoutY="162.0" opacity="0.0" text="KIA">
+         <font>
+            <Font name="A Banoo Light" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="761.0" layoutY="176.0" opacity="0.0" text="Hyundai">
+         <font>
+            <Font name="A Banoo Light" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="1038.0" layoutY="187.0" opacity="0.0" text="Toyota">
+         <font>
+            <Font name="A Banoo Light" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="84.0" layoutX="728.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../gfgdg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="1049.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../frrwgrgr.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ELGOHARY" blendMode="DARKEN" fitHeight="250.0" fitWidth="235.0" layoutX="345.0" layoutY="90.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../302195033_473323484805671_3573862044898259309_n.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
