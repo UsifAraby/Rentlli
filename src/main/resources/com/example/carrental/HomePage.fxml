@@ -80,5 +80,15 @@
             <Image url="@../../../user%20icon.png" />
          </image>
       </ImageView>
+      <Button fx:id="view" layoutX="521.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="view" layoutX="864.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
