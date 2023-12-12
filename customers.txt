@@ -10,3 +10,5 @@ uu,kkk,sasa@gmail.com,usif123,0230,sdcc
 
 1,1,1,1,1,1
 
+3,3,3,3,3,3
+

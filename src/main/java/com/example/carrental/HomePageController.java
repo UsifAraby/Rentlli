@@ -49,7 +49,6 @@ public class HomePageController implements Initializable {
 
 
 
-
     public void Hover() {
 
         setupHoverEffect(rectangle1,car1);
