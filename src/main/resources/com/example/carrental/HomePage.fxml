@@ -40,11 +40,7 @@
       <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" layoutX="373.0" layoutY="459.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" />
       <Rectangle fx:id="rectangle5" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" layoutX="710.0" layoutY="460.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" />
       <Rectangle fx:id="rectangle6" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" layoutX="1027.0" layoutY="470.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" />
-      <ImageView fx:id="car1" fitHeight="178.0" fitWidth="242.0" layoutX="364.0" layoutY="220.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../am638@3.png" />
-         </image>
-      </ImageView>
+      <ImageView fx:id="car1" fitHeight="178.0" fitWidth="242.0" layoutX="364.0" layoutY="220.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="car2" fitHeight="178.0" fitWidth="242.0" layoutX="704.0" layoutY="215.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../am608@3.png" />
@@ -80,12 +76,32 @@
             <Image url="@../../../user%20icon.png" />
          </image>
       </ImageView>
-      <Button fx:id="view" layoutX="521.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+      <Button fx:id="view1" layoutX="532.0" layoutY="326.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="view" layoutX="864.0" layoutY="342.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+      <Button fx:id="view2" layoutX="864.0" layoutY="326.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="view3" layoutX="1178.0" layoutY="326.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="view4" layoutX="532.0" layoutY="644.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="view5" layoutX="864.0" layoutY="644.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="view6" layoutX="1192.0" layoutY="644.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" stylesheets="@homebuttons.css" text="View" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>

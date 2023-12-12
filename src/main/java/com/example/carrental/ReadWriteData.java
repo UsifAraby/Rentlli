@@ -38,12 +38,12 @@ public class ReadWriteData {
                 // Split the line into parts using a delimiter (assuming it's, for example, a comma)
                 String[] parts = line.split(",");
 
-                if (parts.length >= 6) {
-                    // Assuing your Customer class has a constructor that accepts parameters like email, password, etc.
-                    Customer customer = new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
+                if (parts.length >= 5) {
+                    // Assuming your vehicle class has a constructor that accepts parameters like email, password, etc.
+                    Vehicle vehicle = new Vehicle(parts[0], parts[1], parts[2], parts[3], parts[4]);
 
                     // Add the created Customer object to the list
-                    customerContents.add(customer);
+                    vechicles_Content.add(vehicle);
                 } else {
                     // Handle the case where the line doesn't have enough parts
                     System.out.println("Invalid data format in line: " + line);
@@ -77,4 +77,8 @@ public class ReadWriteData {
                 .anyMatch(customer -> customer.getPassword().equals(password));
     }
 
+     public static String getCarPhotoPathById(String carId){
+        return vechicles_Content.stream()
+                .filter(vehicle -> vehicle.)
+     }
 }

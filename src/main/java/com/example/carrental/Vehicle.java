@@ -4,21 +4,22 @@ import javafx.scene.image.Image;
 
 public class Vehicle {
     private Image photo;
-    public static int vehicle_Id;
+    public static  int  vehicle_Id;
     public int ve_Id;
     private String model;
     private String color;
     private String make;
-    private final int year_of_Manufacture;
+    private final String year_of_Manufacture;
     //public int num_of_Features;
     //String [] features;
     public int fuel_Level;
     public boolean rental_Status;
     public int rental_rate_per_Hour;
 
-    public Vehicle( String model, String make, String color, int yearOfManufacture, String photo_Path) {
+    public Vehicle( String model, String make, String color, String yearOfManufacture, String photo_Path) {
         ve_Id=vehicle_Id;
         vehicle_Id++;
+
 
         this.model=model;
         this.make=make;
@@ -32,6 +33,6 @@ public class Vehicle {
         return photo;
     }
     public String toString() {
-        return model + "," + make + "," + color + "," + year_of_Manufacture + "," + photo + ","+"\n";
+        return vehicle_Id +"," + model + "," + make + "," + color + "," + year_of_Manufacture + "," + photo + ","+"\n";
     }
 }
