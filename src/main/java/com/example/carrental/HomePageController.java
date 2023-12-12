@@ -2,6 +2,7 @@ package com.example.carrental;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
@@ -95,6 +96,7 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
        rootPane.setOpacity(0);
         makeFadeInTransition();
         Hover();

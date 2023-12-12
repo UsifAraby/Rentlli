@@ -1,17 +1,17 @@
-#view1,#view2
+#view1,#view2,#view3,#view4,#view5,#view6
 {
     -fx-background-color : #030405;
     -fx-background-radius : 30 30 30 30 ;
     -fx-alignment: baseline-center;
 }
-#view1,#view2:hover
+#view1,#view2,#view3,#view4,#view5,#view6:hover
 {
     -fx-background-color : rgb(32, 42, 53);
     -fx-background-radius : 30 30 30 30 ;
     -fx-alignment: baseline-center;
 }
 
-#view1,#view2:pressed
+#view1,#view2,#view3,#view4,#view5,#view6:pressed
 {
     -fx-background-color : #030405;
     -fx-background-radius : 30 30 30 30 ;

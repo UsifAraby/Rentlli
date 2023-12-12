@@ -8,10 +8,10 @@ import java.util.List;
 public class ReadWriteData {
 
     public static ArrayList <Customer> customerContents = new ArrayList<>();
-
+    public static ArrayList<Vehicle> vechicles_Content= new ArrayList<>();
     public static void readCustomers() throws IOException {
-        String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
-        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader("customers.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 // Split the line into parts using a delimiter (assuming it's, for example, a comma)
@@ -30,12 +30,32 @@ public class ReadWriteData {
             }
         }
     }
+    public static void readVehicles() throws IOException {
+        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader("vehicles.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Split the line into parts using a delimiter (assuming it's, for example, a comma)
+                String[] parts = line.split(",");
 
+                if (parts.length >= 5) {
+                    // Assuming your vehicle class has a constructor that accepts parameters like email, password, etc.
+                    Vehicle vehicle = new Vehicle(parts[0], parts[1], parts[2], parts[3], parts[4]);
+
+                    // Add the created Customer object to the list
+                    vechicles_Content.add(vehicle);
+                } else {
+                    // Handle the case where the line doesn't have enough parts
+                    System.out.println("Invalid data format in line: " + line);
+                }
+            }
+        }
+    }
 
     // Write the contents of the customerContents list to a file
     public static void writeCustomersToFile() throws IOException{
-        String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
+        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
+        BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt"));
         System.out.println("writing...");
         for (Customer customer : customerContents) {
             writer.write(customer.toString());
@@ -57,4 +77,8 @@ public class ReadWriteData {
                 .anyMatch(customer -> customer.getPassword().equals(password));
     }
 
+     public static String getCarPhotoPathById(String carId){
+        return vechicles_Content.stream()
+                .filter(vehicle -> vehicle.)
+     }
 }
