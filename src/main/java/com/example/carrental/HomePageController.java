@@ -12,6 +12,8 @@ import javafx.scene.shape.Rectangle;
 
 import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
@@ -36,13 +38,17 @@ public class HomePageController implements Initializable {
     public AnchorPane rootPane;
 
     @FXML
-    Rectangle rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9;
+    Rectangle rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12;
     @FXML
-    public Rectangle[] rectangles ;
+    public Rectangle[] rectanglesArray ;
     @FXML
-    ImageView car1, car2, car3, car4, car5, car6,car7,car8,car9;
+    ImageView car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12;
     @FXML
-    ImageView[] carImageViews ;
+    ImageView[] carArray ;
+
+    public ArrayList<ImageView> carImageViewsList = new ArrayList<>();
+    public ArrayList<Rectangle> rectanglesList = new ArrayList<>();
+
 
     @FXML
     private ScrollPane scrollPane;
@@ -51,25 +57,27 @@ public class HomePageController implements Initializable {
     private GridPane gridPane;
 
     @FXML
-    Button view1,view2,view3,view4,view5,view6,view7,view8,view9;
+    Button view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11,view12;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
         makeFadeInTransition();
-        displayCarImage();
         gridPane.getStyleClass().add("homebuttons.css");
         System.out.println(ReadWriteData.vechicles_Content.size());
-        carImageViews= new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9};
-        rectangles =  new Rectangle[]{rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9};
+        carArray = new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12};
+        rectanglesArray =  new Rectangle[]{rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12};
+        carImageViewsList.addAll(List.of(carArray));
+        rectanglesList.addAll(List.of(rectanglesArray));
+        displayCarImage();
         Hover();
     }
 
 
     public void Hover() {
 
-        for (int i = 0 ; i<carImageViews.length ; i++){
-            setupHoverEffect(rectangles[i],carImageViews[i]);
+        for (int i = 0 ; i<carImageViewsList.size() ; i++){
+            setupHoverEffect(rectanglesList.get(i),carImageViewsList.get(i));
         }
 
     }
@@ -120,40 +128,53 @@ public class HomePageController implements Initializable {
             switch (vId) {
 
                 case 0:
-                car1.setImage(image);
+                    carImageViewsList.get(0).setImage(image);
                 break;
 
                 case 1:
-                    car2.setImage(image);
+                    carImageViewsList.get(1).setImage(image);
                     break;
 
                 case 2:
-                    car3.setImage(image);
+                    carImageViewsList.get(2).setImage(image);
                     break;
 
                 case 3:
-                    car4.setImage(image);
+                    carImageViewsList.get(3).setImage(image);
                     break;
 
                 case 4:
-                    car5.setImage(image);
+                    carImageViewsList.get(4).setImage(image);
                     break;
 
                 case 5:
-                    car6.setImage(image);
+                    carImageViewsList.get(5).setImage(image);
                     break;
 
                 case 6:
-                    car7.setImage(image);
+                    carImageViewsList.get(6).setImage(image);
                     break;
 
                 case 7:
-                    car8.setImage(image);
+                    carImageViewsList.get(7).setImage(image);
                     break;
 
                 case 8:
-                    car9.setImage(image);
+                carImageViewsList.get(8).setImage(image);
                     break;
+
+                case 9:
+                    carImageViewsList.get(9).setImage(image);
+                    break;
+
+                case 10:
+                    carImageViewsList.get(10).setImage(image);
+                    break;
+
+                case 11:
+                    carImageViewsList.get(11).setImage(image);
+                    break;
+
             }
 
 
