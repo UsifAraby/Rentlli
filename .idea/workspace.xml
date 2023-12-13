@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eca6564-173d-4668-ba76-f64b25a3a610" name="Changes" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/viewButtons.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/ReadWriteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/ReadWriteData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/SignupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/HomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/homebuttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/homebuttons.css" afterDir="false" />
     </list>
@@ -42,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Basbos",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "E:/java OOP/HelloFx",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }

@@ -35,10 +35,7 @@ public class SignupController implements Initializable {
     private Parent root;
     @FXML
     TextField firstname ,lastname,email,password,phone_number,driver_license;
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+
 
     Alert ERROR = new Alert(Alert.AlertType.ERROR);
 

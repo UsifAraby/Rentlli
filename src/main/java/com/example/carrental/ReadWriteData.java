@@ -29,6 +29,9 @@ public class ReadWriteData {
                 }
             }
         }
+
+
+
     }
     public static void readVehicles() throws IOException {
         //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
@@ -40,10 +43,11 @@ public class ReadWriteData {
 
                 if (parts.length >= 5) {
                     // Assuming your vehicle class has a constructor that accepts parameters like email, password, etc.
-                    Vehicle vehicle = new Vehicle(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                    Vehicle vehicle = new Vehicle(parts[0], parts[1], parts[2], parts[3], parts[4],parts[5]);
 
                     // Add the created Customer object to the list
                     vechicles_Content.add(vehicle);
+                    System.out.println(vechicles_Content);
                 } else {
                     // Handle the case where the line doesn't have enough parts
                     System.out.println("Invalid data format in line: " + line);
@@ -76,9 +80,9 @@ public class ReadWriteData {
         return customerContents.stream()
                 .anyMatch(customer -> customer.getPassword().equals(password));
     }
-
+/*
      public static String getCarPhotoPathById(String carId){
         return vechicles_Content.stream()
                 .filter(vehicle -> vehicle.)
-     }
+     }*/
 }
