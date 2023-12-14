@@ -48,7 +48,24 @@ public class Vehicle {
         return ve_Id;
     }
 
-    public String toString() {
-        return licencePlate +"," + model + "," + make + "," + color + "," + year_of_Manufacture + "," + photo_Path + ","+"\n";
+    public String getModel() {
+        return model;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getYear_of_Manufacture() {
+        return year_of_Manufacture;
+    }
+
+    public String toString() {
+        return licencePlate +"," + make + "," + model + "," + color + "," + year_of_Manufacture + "," + photo_Path + ","+"\n";
+    }
+
 }

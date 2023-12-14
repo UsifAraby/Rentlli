@@ -34,6 +34,9 @@ import java.time.format.TextStyle;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
+
+    String viewCar = "carView.fxml";
+
     @FXML
     public AnchorPane rootPane;
 
@@ -57,12 +60,18 @@ public class HomePageController implements Initializable {
     private GridPane gridPane;
 
     @FXML
-    Button view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11,view12;
+    Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
 
+    SceneLoader sceneLoader = new SceneLoader();
+    ViewToReserveController viewToReserveController = new ViewToReserveController();
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
-        makeFadeInTransition();
+        sceneLoader.makeFadeInTransition(rootPane);
         gridPane.getStyleClass().add("homebuttons.css");
         System.out.println(ReadWriteData.vechicles_Content.size());
         carArray = new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12};
@@ -73,8 +82,29 @@ public class HomePageController implements Initializable {
         Hover();
     }
 
+    public void ViewButtonClicked(ActionEvent event) {
+        // Get the clicked button
+        Button clickedButton = (Button) event.getSource();
 
-    public void Hover() {
+        // Extract the car index from the button ID
+        int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
+            loader.load();
+            loader.setRoot(rootPane);
+            viewToReserveController = loader.getController();
+            viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
+            sceneLoader.makefadeout(rootPane, viewCar);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+        public void Hover() {
 
         for (int i = 0 ; i<carImageViewsList.size() ; i++){
             setupHoverEffect(rectanglesList.get(i),carImageViewsList.get(i));
@@ -125,7 +155,11 @@ public class HomePageController implements Initializable {
 
             Image image = new Image(new File(photoPath).toURI().toString());
 
-            switch (vId) {
+            if (vId >= 0 && vId < carImageViewsList.size()) {
+                carImageViewsList.get(vId).setImage(image);
+            }
+
+            /*switch (vId) {
 
                 case 0:
                     carImageViewsList.get(0).setImage(image);
@@ -175,7 +209,7 @@ public class HomePageController implements Initializable {
                     carImageViewsList.get(11).setImage(image);
                     break;
 
-            }
+            }*/
 
 
         }
@@ -183,16 +217,7 @@ public class HomePageController implements Initializable {
 
 
 
-    public void makeFadeInTransition() {
 
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
-        fadeTransition.setNode(rootPane);
-        fadeTransition.setFromValue(0);
-        fadeTransition.setToValue(1);
-        fadeTransition.play();
-
-    }
 
 
 }
