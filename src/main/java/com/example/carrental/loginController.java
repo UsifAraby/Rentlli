@@ -58,7 +58,8 @@ public class loginController implements Initializable {
         if (validateInputs_Login()) {
 
             if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
-                sceneLoader.makefadeout(rootPane, homeScene);
+                sceneLoader.loadNextScene(rootPane, homeScene);
+                sceneLoader.makefadeout(rootPane);
                 System.out.println("logged in succefully!");
             }
                 else {
@@ -89,7 +90,7 @@ public class loginController implements Initializable {
 
 
     public void signuptrans2(ActionEvent event) throws IOException {
-        sceneLoader.makefadeout(rootPane, signScene);
+        sceneLoader.loadNextScene(rootPane, signScene);
     }
 
 
