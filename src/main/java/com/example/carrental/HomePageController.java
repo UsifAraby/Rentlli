@@ -2,8 +2,8 @@ package com.example.carrental;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -22,8 +22,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -49,7 +47,11 @@ public class HomePageController implements Initializable {
     public ArrayList<ImageView> carImageViewsList = new ArrayList<>();
     public ArrayList<Rectangle> rectanglesList = new ArrayList<>();
 
+//ele zwedto
 
+private Stage stage;
+    private Scene scene;
+    private Parent root;
     @FXML
     private ScrollPane scrollPane;
 
@@ -180,8 +182,25 @@ public class HomePageController implements Initializable {
 
         }
     }
+    //ele zwedto
+    public void ReservationHistory(ActionEvent event2) throws IOException{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Reservation History.fxml"));
+        root = loader.load();
+
+        Reservation_history reservation_history = loader.getController();
 
 
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(1000), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.play();
+
+        stage=(Stage)((Node)event2.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     public void makeFadeInTransition() {
 

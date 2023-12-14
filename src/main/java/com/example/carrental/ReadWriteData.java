@@ -18,7 +18,7 @@ public class ReadWriteData {
                 String[] parts = line.split(",");
 
                 if (parts.length >= 6) {
-                    // Assuing your Customer class has a constructor that accepts parameters like email, password, etc.
+                    // Assuming your Customer class has a constructor that accepts parameters like email, password, etc.
                     Customer customer = new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
 
                     // Add the created Customer object to the list
