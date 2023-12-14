@@ -8,7 +8,7 @@ adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resour
 
 adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am886@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am542@3.png
+adg157,AstonMartin,Sport,Gray,2022,D:\Rentlli\src\main\resources\am542@3.png
 
 adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am690@3.png
 
