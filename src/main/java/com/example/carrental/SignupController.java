@@ -50,8 +50,7 @@ public class SignupController implements Initializable {
         if (validateInputs_Signup()) {
         signed= (ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()));
         if (!signed) {
-                sceneLoader.loadNextScene(rootPane, loginScene);
-                sceneLoader.makefadeout(rootPane);
+                sceneLoader.makefadeout(rootPane, loginScene);
                 sign_Info();
                 ReadWriteData.customerContents.add(c1);
         }

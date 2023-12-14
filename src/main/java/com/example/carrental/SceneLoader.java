@@ -26,12 +26,19 @@ public class SceneLoader {
         stage.show();
     }
 
-    public void makefadeout(AnchorPane rootPane){
+    public void makefadeout(AnchorPane rootPane,String NScene){
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(rootPane);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);
+        fadeTransition.setOnFinished((ActionEvent e) -> {
+            try {
+                loadNextScene(rootPane,NScene);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         fadeTransition.play();
 

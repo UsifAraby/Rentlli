@@ -94,7 +94,7 @@ public class HomePageController implements Initializable {
             ViewToReserveController viewToReserveController = loader.getController();
             viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
             rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
-            sceneLoader.makefadeout(rootPane);
+            sceneLoader.makeFadeInTransition(rootPane);
 
         } catch (IOException e) {
             e.printStackTrace();
