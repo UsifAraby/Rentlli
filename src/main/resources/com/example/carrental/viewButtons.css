@@ -1,0 +1,20 @@
+.button
+{
+    -fx-background-color : #030405;
+    -fx-background-radius : 30 30 30 30 ;
+    -fx-alignment: baseline-center;
+
+}
+.button:hover
+{
+    -fx-background-color : rgb(32, 42, 53);
+    -fx-background-radius : 30 30 30 30 ;
+    -fx-alignment: baseline-center;
+}
+
+.button:pressed
+{
+    -fx-background-color : #030405;
+    -fx-background-radius : 30 30 30 30 ;
+    -fx-alignment: baseline-center;
+}

@@ -1,3 +1,4 @@
+
 .button
 {
 
@@ -20,4 +21,11 @@
         -fx-background-color : transparent;
 
 
+}
+
+.scrollPane {
+    -fx-background-color: transparent;
+}
+.gridPane {
+    -fx-background-color: transparent;
 }

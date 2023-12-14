@@ -38,38 +38,19 @@ public class loginController implements Initializable {
     @FXML
     TextField password;
 
+    SceneLoader sceneLoader = new SceneLoader();
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
                 rootPane.setOpacity(0);
-                makeFadeInTransition();
+                sceneLoader.makeFadeInTransition(rootPane);
     }
 
 
     Alert ERROR = new Alert(Alert.AlertType.ERROR);
 
-/*
-    public boolean readCustomers(String email,String passwd) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line;
-        while ( (line = reader.readLine()) != null){
-                String[] parts = line.split(",");
-            if (parts.length == 2 && parts[0].equals(email) && parts[1].equals(passwd)) {
-                return true;
-            }
-        }
-            return false;
-    }*/
 
-    public void makeFadeInTransition() {
-
-            FadeTransition fadeTransition = new FadeTransition();
-            fadeTransition.setDuration(Duration.millis(1000));
-            fadeTransition.setNode(rootPane);
-            fadeTransition.setFromValue(0);
-            fadeTransition.setToValue(1);
-            fadeTransition.play();
-
-    }
 
     private boolean validateInputs_Login(){
         return !email.getText().isEmpty()&&!password.getText().isEmpty();
@@ -79,7 +60,7 @@ public class loginController implements Initializable {
         if (validateInputs_Login()) {
 
             if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
-                makefadeout(homeScene);
+                sceneLoader.makefadeout(rootPane, homeScene);
                 System.out.println("logged in succefully!");
             }
                 else {
@@ -110,41 +91,8 @@ public class loginController implements Initializable {
 
 
     public void signuptrans2(ActionEvent event) throws IOException {
-        makefadeout(signScene);
+        sceneLoader.makefadeout(rootPane, signScene);
     }
-
-    public void makefadeout(String NScene){
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
-        fadeTransition.setNode(rootPane);
-        fadeTransition.setFromValue(1);
-        fadeTransition.setToValue(0);
-        fadeTransition.setOnFinished((ActionEvent e) -> {
-            try {
-                loadNextScene(NScene);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-
-        fadeTransition.play();
-
-    }
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
-    public void loadNextScene(String NScene) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(NScene));
-        root = loader.load();
-        stage = (Stage) rootPane.getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-
 
 
 

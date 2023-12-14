@@ -29,7 +29,9 @@ public class Customer extends User {
         this.license = license;
     }
 
-
+    public int getCostumer_ID() {
+        return costumer_ID;
+    }
 
     @Override
     public String toString() {
