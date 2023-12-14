@@ -10,7 +10,7 @@ public class ReadWriteData {
     public static ArrayList <Customer> customerContents = new ArrayList<>();
 
     public static void readCustomers() throws IOException {
-        String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
+        String filepath = "customers.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -34,8 +34,8 @@ public class ReadWriteData {
 
     // Write the contents of the customerContents list to a file
     public static void writeCustomersToFile() throws IOException{
-        String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filepath, true));
+        String filepath = "customers.txt";
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
         System.out.println("writing...");
         for (Customer customer : customerContents) {
             writer.write(customer.toString());

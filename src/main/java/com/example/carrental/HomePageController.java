@@ -58,12 +58,14 @@ public class HomePageController implements Initializable {
         setupHoverEffect(rectangle4,car4);
         setupHoverEffect(rectangle5,car5);
         setupHoverEffect(rectangle6,car6);
+        setupHoverEffect(rectangle6,car6);
 
     }
 
     private void setupHoverEffect(Rectangle rectangle,ImageView image) {
         image.setScaleX(1);
         image.setScaleY(1);
+
 
         rectangle.setScaleX(1);
         rectangle.setScaleY(1);

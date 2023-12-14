@@ -52,6 +52,7 @@ public class SignupController implements Initializable {
         if (validateInputs_Signup()) {
         signed= (ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()));
         if (!signed) {
+                sign_Info();
                 makefadeout();
                 ReadWriteData.customerContents.add(c1);
         }

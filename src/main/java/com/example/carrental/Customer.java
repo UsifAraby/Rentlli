@@ -9,11 +9,13 @@ public class Customer extends User {
 
     final int costumer_ID;
 
+
     String license;
     public Customer(){
 
         costumer_ID=cid;
         cid++;
+
     }
     public Customer(String first_Name, String last_Name, String email_Adress,String password, String phone_Number,String license) {
 
