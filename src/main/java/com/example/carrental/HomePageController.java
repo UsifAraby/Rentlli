@@ -90,12 +90,11 @@ public class HomePageController implements Initializable {
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
-            loader.load();
-            loader.setRoot(rootPane);
-            viewToReserveController = loader.getController();
+            Parent viewCarRoot = loader.load();
+            ViewToReserveController viewToReserveController = loader.getController();
             viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
-            sceneLoader.makefadeout(rootPane, viewCar);
-
+            rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
+            sceneLoader.makeFadeInTransition(rootPane);
 
         } catch (IOException e) {
             e.printStackTrace();
