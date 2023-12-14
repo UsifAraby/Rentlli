@@ -83,18 +83,19 @@ public class HomePageController implements Initializable {
     }
 
     public void ViewButtonClicked(ActionEvent event) {
-        // Get the clicked button
         Button clickedButton = (Button) event.getSource();
-
-        // Extract the car index from the button ID
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
             Parent viewCarRoot = loader.load();
+
+            // Access the controller of the new scene
             ViewToReserveController viewToReserveController = loader.getController();
             viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
+
+            // Replace the content of the current scene with the new scene
             rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
-            sceneLoader.makeFadeInTransition(rootPane);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -103,7 +104,9 @@ public class HomePageController implements Initializable {
 
 
 
-        public void Hover() {
+
+
+    public void Hover() {
 
         for (int i = 0 ; i<carImageViewsList.size() ; i++){
             setupHoverEffect(rectanglesList.get(i),carImageViewsList.get(i));

@@ -1,25 +1,25 @@
-kij143,AstonMartin,Yaris,Red,2020,C:\Users\user\Desktop\Rentlli\src\main\resources\am638@3.png
+kij143,AstonMartin,Yaris,Red,2020,/Users/mostafa_w.r/Desktop/rentelli/Rentlli/src/main/resources/am542@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am608@3.png
+adg157,AstonMartin,Sport,Gray,2022,am608@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am668@3.png
+adg157,AstonMartin,Sport,Gray,2022,am668@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am709@3.png
+adg157,AstonMartin,Sport,Gray,2022,am709@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am886@3.png
+adg157,AstonMartin,Sport,Gray,2022,am886@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,D:\Rentlli\src\main\resources\am542@3.png
+adg157,AstonMartin,Sport,Gray,2022,am542@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am690@3.png
+adg157,AstonMartin,Sport,Gray,2022,am690@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am638f@3.png
+adg157,AstonMartin,Sport,Gray,2022,am638f@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am806@3.png
+adg157,AstonMartin,Sport,Gray,2022,am806@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am608f@3 copy.png
+adg157,AstonMartin,Sport,Gray,2022,am608f@3 copy.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am739@3.png
+adg157,AstonMartin,Sport,Gray,2022,am739@3.png
 
-adg157,AstonMartin,Sport,Gray,2022,C:\Users\user\Desktop\Rentlli\src\main\resources\am688@3.png
+adg157,AstonMartin,Sport,Gray,2022,am688@3.png
 
 
