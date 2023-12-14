@@ -1,0 +1,30 @@
+.label{
+    -fx-background-color : rgb(51, 149, 255);
+    -fx-background-radius : 30 30 30 30 ;
+    -fx-alignment: baseline-center;
+
+}
+
+.button
+{
+
+    -fx-background-color : rgb(51, 149, 255);
+    -fx-background-radius : 30 30 30 30 ;
+
+}
+
+.button:hover
+{
+
+    -fx-background-color : rgb(23, 96, 175);
+    -fx-background-radius : 30 30 30 30 ;
+
+}
+
+.button:pressed
+{
+
+       -fx-background-color : rgb(51, 149, 255);
+       -fx-background-radius : 30 30 30 30 ;
+
+}

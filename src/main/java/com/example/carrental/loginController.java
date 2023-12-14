@@ -48,18 +48,6 @@ public class loginController implements Initializable {
 
     Alert ERROR = new Alert(Alert.AlertType.ERROR);
 
-/*
-    public boolean readCustomers(String email,String passwd) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line;
-        while ( (line = reader.readLine()) != null){
-                String[] parts = line.split(",");
-            if (parts.length == 2 && parts[0].equals(email) && parts[1].equals(passwd)) {
-                return true;
-            }
-        }
-            return false;
-    }*/
 
 
     private boolean validateInputs_Login(){
@@ -71,7 +59,6 @@ public class loginController implements Initializable {
 
             if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
                 sceneLoader.makefadeout(rootPane, homeScene);
-                //makefadeout(homeScene);
                 System.out.println("logged in succefully!");
             }
                 else {

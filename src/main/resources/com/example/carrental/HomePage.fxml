@@ -61,74 +61,74 @@
                   <ImageView fx:id="car4" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car5" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car6" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button fx:id="view1" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="view0" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="view2" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="view1" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="view3" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="view2" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="view4" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="view3" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="view5" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="view4" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="view6" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="view5" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
                   <Rectangle fx:id="rectangle7" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car7" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="view7" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="view6" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
                   <Rectangle fx:id="rectangle8" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car8" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="view8" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="view7" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
                   <Rectangle fx:id="rectangle9" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car9" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="view9" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="view8" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
                   <Rectangle fx:id="rectangle10" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car10" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button fx:id="view10" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <Button fx:id="view9" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
                   <Rectangle fx:id="rectangle11" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car11" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button fx:id="view11" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <Button fx:id="view10" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
                   <Rectangle fx:id="rectangle12" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <ImageView fx:id="car12" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button fx:id="view12" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <Button fx:id="view11" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
