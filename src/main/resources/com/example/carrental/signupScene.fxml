@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.HelloController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.SignupController">
    <children>
       <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,27 +25,27 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField cache="true" layoutX="808.0" layoutY="263.0" prefHeight="26.0" prefWidth="363.0" promptText="LastName" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="lastname" cache="true" layoutX="808.0" layoutY="263.0" prefHeight="26.0" prefWidth="363.0" promptText="LastName" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField cache="true" layoutX="808.0" layoutY="348.0" prefHeight="26.0" prefWidth="363.0" promptText="EMail" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="email" cache="true" layoutX="808.0" layoutY="348.0" prefHeight="26.0" prefWidth="363.0" promptText="EMail" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField cache="true" layoutX="808.0" layoutY="517.0" prefHeight="26.0" prefWidth="363.0" promptText="PhoneNumber" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="phone_number" cache="true" layoutX="808.0" layoutY="517.0" prefHeight="26.0" prefWidth="363.0" promptText="PhoneNumber" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField cache="true" layoutX="808.0" layoutY="602.0" prefHeight="26.0" prefWidth="363.0" promptText="Driver'sLicense" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <TextField fx:id="driver_license" cache="true" layoutX="808.0" layoutY="602.0" prefHeight="26.0" prefWidth="363.0" promptText="Driver'sLicense" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="808.0" layoutY="428.0" opacity="0.96" prefHeight="26.0" prefWidth="363.0" promptText="Password" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
+      <PasswordField fx:id="password" layoutX="808.0" layoutY="428.0" opacity="0.96" prefHeight="26.0" prefWidth="363.0" promptText="Password" style="-fx-text-fill: white;" styleClass="text-field" stylesheets="@textfields.css">
          <font>
             <Font size="24.0" />
          </font>

@@ -1,0 +1,31 @@
+
+.button
+{
+
+    -fx-background-color : transparent;
+    -fx-alignment: baseline-left;
+
+}
+
+.button:hover
+{
+
+    -fx-background-color : #030405;
+
+
+}
+
+.button:pressed
+{
+
+        -fx-background-color : transparent;
+
+
+}
+
+.scrollPane {
+    -fx-background-color: transparent;
+}
+.gridPane {
+    -fx-background-color: transparent;
+}
