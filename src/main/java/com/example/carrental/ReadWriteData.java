@@ -94,6 +94,33 @@ public class ReadWriteData {
         return customerContents.stream()
                 .anyMatch(customer -> customer.getPassword().equals(password));
     }
+/*
+     public static String getCarPhotoPathById(String carId){
+        return vechicles_Content.stream()
+                .filter(vehicle -> vehicle.)
+     }*/
 
+
+
+  /*  public static void deleteCarByCarId(int carId) {
+        int index = findCarIndexByCarId(carId);
+
+
+        if (index != -1) {
+            vechicles_Content.remove(index);
+            System.out.println("Car with ID " + carId + " deleted successfully.");
+        } else {
+            System.out.println("Car with ID " + carId + " not found.");
+        }
+    }
+
+    private static int findCarIndexByCarId(int carId) {
+        for (int i = 0; i < vechicles_Content.size(); i++) {
+            if (vechicles_Content.get(i).getVe_Id() == carId) {
+                return i; // Found the car, return its index
+            }
+        }
+        return -1;
+    }*/
 
 }

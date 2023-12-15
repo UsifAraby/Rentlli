@@ -20,12 +20,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.time.format.TextStyle;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
 
+
     public String file = "customers.txt";
     public String homeScene = "HomePage.fxml";
+    public String Admin_scene="admincontrol.fxml";
     public String signScene = "signupScene.fxml";
     public boolean logged ;
 
@@ -57,16 +60,20 @@ public class loginController implements Initializable {
     public void logintrans(ActionEvent event) throws IOException {
         if (validateInputs_Login()) {
             if (isSpecialCaseAdminLogin()) {
-                sceneLoader.makefadeout(rootPane, "AdminPage.fxml");
                 System.out.println("ADMIN");
+                sceneLoader.loadNextScene(rootPane, Admin_scene);
                 System.out.println("Admin logged in successfully!");
             } else if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
+                // Handle normal user login
                 sceneLoader.makefadeout(rootPane, homeScene);
+                System.out.println(ReadWriteData.customerContents.get(0).getCostumer_ID());;
                 System.out.println("Normal user logged in successfully!");
             } else {
+                // Handle invalid credentials for both admin and normal user
                 showErrorAlert("Wrong Email Or Password!");
             }
         } else {
+            // Handle input validation errors
             if (!email.getText().isEmpty()) {
                 showErrorAlert("Enter Password!");
             } else if (email.getText().isEmpty() && password.getText().isEmpty()) {
@@ -86,9 +93,6 @@ public class loginController implements Initializable {
         ERROR.setContentText("Click Ok To Continue: ");
         ERROR.showAndWait();
     }
-
-
-
 
     public void signuptrans2(ActionEvent event) throws IOException {
         sceneLoader.makefadeout(rootPane, signScene);

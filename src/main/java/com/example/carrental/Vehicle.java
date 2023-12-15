@@ -60,6 +60,7 @@ public class Vehicle {
         return make;
     }
 
+
     public String getYear_of_Manufacture() {
         return year_of_Manufacture;
     }

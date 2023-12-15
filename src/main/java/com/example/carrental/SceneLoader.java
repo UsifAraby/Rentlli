@@ -17,9 +17,6 @@ public class SceneLoader {
     private Scene scene;
     private Parent root;
 
-
-
-
     public void loadNextScene(AnchorPane rootPane, String NScene) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(NScene));
         root = loader.load();
@@ -29,9 +26,11 @@ public class SceneLoader {
         stage.show();
     }
 
+
+
+
     public void loadCarDetails(AnchorPane rootPane, String viewCar, int carIndex) {
         try {
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
             Parent viewCarRoot = loader.load();
 
@@ -46,18 +45,8 @@ public class SceneLoader {
             e.printStackTrace();
         }
     }
-    public void makefadeout(AnchorPane rootPane){
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
-        fadeTransition.setNode(rootPane);
-        fadeTransition.setFromValue(1);
-        fadeTransition.setToValue(0);
-        fadeTransition.play();
-
-    }
-
-
     public void makefadeout(AnchorPane rootPane,String NScene){
+        makeFadeInTransition(rootPane);
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(rootPane);
@@ -74,7 +63,6 @@ public class SceneLoader {
         fadeTransition.play();
 
     }
-
     public void makeFadeInTransition(AnchorPane rootPane) {
 
         FadeTransition fadeTransition = new FadeTransition();
@@ -83,6 +71,7 @@ public class SceneLoader {
         fadeTransition.setFromValue(0);
         fadeTransition.setToValue(1);
         fadeTransition.play();
+
     }
 
 

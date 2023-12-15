@@ -51,6 +51,7 @@ public class HomePageController implements Initializable {
 
     public ArrayList<ImageView> carImageViewsList = new ArrayList<>();
     public ArrayList<Rectangle> rectanglesList = new ArrayList<>();
+    public ArrayList<Button> Button_list=new ArrayList<>();
 
 
     @FXML
@@ -61,6 +62,7 @@ public class HomePageController implements Initializable {
 
     @FXML
     Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
+    Button []button;
 
     SceneLoader sceneLoader = new SceneLoader();
     ViewToReserveController viewToReserveController = new ViewToReserveController();
@@ -68,15 +70,17 @@ public class HomePageController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
         sceneLoader.makeFadeInTransition(rootPane);
+        gridPane.getStyleClass().add("homebuttons.css");
+        button=new Button[]{view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11};
         System.out.println(ReadWriteData.vechicles_Content.size());
         carArray = new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12};
         rectanglesArray =  new Rectangle[]{rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12};
         carImageViewsList.addAll(List.of(carArray));
+        Button_list.addAll(List.of(button));
         rectanglesList.addAll(List.of(rectanglesArray));
         displayCarImage();
         Hover();
@@ -85,11 +89,17 @@ public class HomePageController implements Initializable {
     public void ViewButtonClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
+
         sceneLoader.loadCarDetails(rootPane, viewCar, carIndex);
-}
+    }
 
 
-        public void Hover() {
+
+
+
+
+
+    public void Hover() {
 
         for (int i = 0 ; i<carImageViewsList.size() ; i++){
             setupHoverEffect(rectanglesList.get(i),carImageViewsList.get(i));
@@ -143,6 +153,59 @@ public class HomePageController implements Initializable {
             if (vId >= 0 && vId < carImageViewsList.size()) {
                 carImageViewsList.get(vId).setImage(image);
             }
+
+            /*switch (vId) {
+
+                case 0:
+                    carImageViewsList.get(0).setImage(image);
+                break;
+
+                case 1:
+                    carImageViewsList.get(1).setImage(image);
+                    break;
+
+                case 2:
+                    carImageViewsList.get(2).setImage(image);
+                    break;
+
+                case 3:
+                    carImageViewsList.get(3).setImage(image);
+                    break;
+
+                case 4:
+                    carImageViewsList.get(4).setImage(image);
+                    break;
+
+                case 5:
+                    carImageViewsList.get(5).setImage(image);
+                    break;
+
+                case 6:
+                    carImageViewsList.get(6).setImage(image);
+                    break;
+
+                case 7:
+                    carImageViewsList.get(7).setImage(image);
+                    break;
+
+                case 8:
+                carImageViewsList.get(8).setImage(image);
+                    break;
+
+                case 9:
+                    carImageViewsList.get(9).setImage(image);
+                    break;
+
+                case 10:
+                    carImageViewsList.get(10).setImage(image);
+                    break;
+
+                case 11:
+                    carImageViewsList.get(11).setImage(image);
+                    break;
+
+            }*/
+
 
         }
     }
