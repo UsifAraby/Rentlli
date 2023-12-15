@@ -31,6 +31,7 @@ public class SceneLoader {
 
     public void loadCarDetails(AnchorPane rootPane, String viewCar, int carIndex) {
         try {
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
             Parent viewCarRoot = loader.load();
 
@@ -44,6 +45,15 @@ public class SceneLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void makefadeout(AnchorPane rootPane){
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(rootPane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.play();
+
     }
 
 

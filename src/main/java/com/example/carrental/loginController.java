@@ -57,6 +57,7 @@ public class loginController implements Initializable {
     public void logintrans(ActionEvent event) throws IOException {
         if (validateInputs_Login()) {
             if (isSpecialCaseAdminLogin()) {
+                sceneLoader.makefadeout(rootPane, "AdminPage.fxml");
                 System.out.println("ADMIN");
                 System.out.println("Admin logged in successfully!");
             } else if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {

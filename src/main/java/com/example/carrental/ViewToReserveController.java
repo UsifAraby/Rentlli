@@ -30,7 +30,6 @@ public class ViewToReserveController implements Initializable {
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
-                sceneLoader.makeFadeInTransition(rootPane);
 
         }
 

@@ -85,7 +85,6 @@ public class HomePageController implements Initializable {
     public void ViewButtonClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
-
         sceneLoader.loadCarDetails(rootPane, viewCar, carIndex);
 }
 

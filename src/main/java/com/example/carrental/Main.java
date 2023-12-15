@@ -33,11 +33,12 @@ public class Main extends Application {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 ReadWriteData.writeCustomersToFile();
+                ReadWriteData.writeVehiclesToFile();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
             System.out.println("Program is closing. Performing cleanup actions...");
         }));
 
-        }
     }
+}
