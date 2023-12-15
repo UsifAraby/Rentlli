@@ -22,12 +22,11 @@ public class AdminController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sceneLoader.makeFadeInTransition(rootPane);
 
-        // Populate the ComboBox with values from 1 to 12
         carIdComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
     }
 
     public void Delete_car(ActionEvent event) {
-        int selectedCarId = carIdComboBox.getValue(); // Get the selected value from ComboBox
+        int selectedCarId = carIdComboBox.getValue();
         ReadWriteData.vechicles_Content.remove(selectedCarId);
     }
 }
