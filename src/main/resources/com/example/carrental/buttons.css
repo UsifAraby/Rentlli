@@ -39,4 +39,9 @@
        -fx-background-radius : 30 30 30 30 ;
 
 }
+.label
+{
+-fx-background-color : rgb(23, 96, 175);
+    -fx-background-radius : 30 30 30 30 ;
 
+}

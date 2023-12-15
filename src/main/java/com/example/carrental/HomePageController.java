@@ -2,6 +2,7 @@ package com.example.carrental;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
@@ -65,9 +66,12 @@ public class HomePageController implements Initializable {
     SceneLoader sceneLoader = new SceneLoader();
     ViewToReserveController viewToReserveController = new ViewToReserveController();
 
+String choose_compare= "choose2cars.fxml";
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
@@ -81,6 +85,23 @@ public class HomePageController implements Initializable {
         displayCarImage();
         Hover();
     }
+    public void switchTocompare2 (ActionEvent event) throws IOException {
+
+        //sceneLoader.makefadeout(rootPane,choose_compare);
+
+
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("choose2cars.fxml"));
+        root = loader.load();
+        //choose2cars choose = loader.getController();
+        stage = (Stage) rootPane.getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("hello");
+    }
+
+
+
 
     public void ViewButtonClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();

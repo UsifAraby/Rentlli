@@ -18,12 +18,16 @@ public class SceneLoader {
     private Parent root;
 
     public void loadNextScene(AnchorPane rootPane, String NScene) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(NScene));
-        root = loader.load();
-        stage = (Stage) rootPane.getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(NScene));
+            root = loader.load();
+            stage = (Stage) rootPane.getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void makefadeout(AnchorPane rootPane,String NScene){
