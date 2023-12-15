@@ -95,5 +95,6 @@
             <Font size="22.0" />
          </font>
       </Label>
+      <Button fx:id="fbutton" layoutX="492.0" layoutY="487.0" mnemonicParsing="false" onAction="#viewfeatures" prefHeight="26.0" prefWidth="115.0" text="tap to se features" textFill="#2a54ae" />
    </children>
 </AnchorPane>

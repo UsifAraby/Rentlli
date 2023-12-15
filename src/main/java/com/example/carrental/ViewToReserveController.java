@@ -1,5 +1,6 @@
 package com.example.carrental;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,6 +24,9 @@ public class ViewToReserveController implements Initializable {
         ImageView viewCarImage;
         @FXML
         AnchorPane rootPane;
+        Button fbutton;
+
+
 
         SceneLoader sceneLoader = new SceneLoader();
 
@@ -35,7 +39,6 @@ public class ViewToReserveController implements Initializable {
         }
 
 
-
         public void setCarDetails(Vehicle car) {
                 carnameLabel.setText(car.getMake());
                 carmodelLabel.setText(car.getModel());
@@ -45,7 +48,7 @@ public class ViewToReserveController implements Initializable {
                 Image image = new Image(new File(photoPath).toURI().toString());
                 viewCarImage.setImage(image);
         }
-
-
-
 }
+
+
+
