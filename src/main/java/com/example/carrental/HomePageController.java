@@ -145,59 +145,6 @@ public class HomePageController implements Initializable {
                 carImageViewsList.get(vId).setImage(image);
             }
 
-            /*switch (vId) {
-
-                case 0:
-                    carImageViewsList.get(0).setImage(image);
-                break;
-
-                case 1:
-                    carImageViewsList.get(1).setImage(image);
-                    break;
-
-                case 2:
-                    carImageViewsList.get(2).setImage(image);
-                    break;
-
-                case 3:
-                    carImageViewsList.get(3).setImage(image);
-                    break;
-
-                case 4:
-                    carImageViewsList.get(4).setImage(image);
-                    break;
-
-                case 5:
-                    carImageViewsList.get(5).setImage(image);
-                    break;
-
-                case 6:
-                    carImageViewsList.get(6).setImage(image);
-                    break;
-
-                case 7:
-                    carImageViewsList.get(7).setImage(image);
-                    break;
-
-                case 8:
-                carImageViewsList.get(8).setImage(image);
-                    break;
-
-                case 9:
-                    carImageViewsList.get(9).setImage(image);
-                    break;
-
-                case 10:
-                    carImageViewsList.get(10).setImage(image);
-                    break;
-
-                case 11:
-                    carImageViewsList.get(11).setImage(image);
-                    break;
-
-            }*/
-
-
         }
     }
 
