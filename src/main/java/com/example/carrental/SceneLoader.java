@@ -51,6 +51,7 @@ public class SceneLoader {
         fadeTransition.setFromValue(0);
         fadeTransition.setToValue(1);
         fadeTransition.play();
+
     }
 
 

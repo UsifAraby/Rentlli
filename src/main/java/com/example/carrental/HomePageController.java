@@ -83,6 +83,7 @@ public class HomePageController implements Initializable {
     }
 
     public void ViewButtonClicked(ActionEvent event) {
+
         Button clickedButton = (Button) event.getSource();
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
 
@@ -96,6 +97,7 @@ public class HomePageController implements Initializable {
 
             // Replace the content of the current scene with the new scene
             rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
+            sceneLoader.makeFadeInTransition(rootPane);
 
         } catch (IOException e) {
             e.printStackTrace();

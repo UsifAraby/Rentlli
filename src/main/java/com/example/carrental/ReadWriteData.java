@@ -16,7 +16,7 @@ public class ReadWriteData {
             while ((line = reader.readLine()) != null) {
                 // Split the line into parts using a delimiter (assuming it's, for example, a comma)
                 String[] parts = line.split(",");
-
+                /*4,4,4,4,4,4*/
                 if (parts.length >= 6) {
                     // Assuing your Customer class has a constructor that accepts parameters like email, password, etc.
                     Customer customer = new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
