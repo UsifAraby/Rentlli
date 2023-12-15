@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5eca6564-173d-4668-ba76-f64b25a3a610" name="Changes" comment="init commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/customers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/ReadWriteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/ReadWriteData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -187,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702593414687</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1702641495172</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702641495172</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

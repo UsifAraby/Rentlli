@@ -51,6 +51,7 @@ public class HomePageController implements Initializable {
 
     public ArrayList<ImageView> carImageViewsList = new ArrayList<>();
     public ArrayList<Rectangle> rectanglesList = new ArrayList<>();
+    public ArrayList<Button> Button_list=new ArrayList<>();
 
 
     @FXML
@@ -61,6 +62,7 @@ public class HomePageController implements Initializable {
 
     @FXML
     Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
+    Button []button;
 
     SceneLoader sceneLoader = new SceneLoader();
     ViewToReserveController viewToReserveController = new ViewToReserveController();
@@ -73,36 +75,25 @@ public class HomePageController implements Initializable {
         rootPane.setOpacity(0);
         sceneLoader.makeFadeInTransition(rootPane);
         gridPane.getStyleClass().add("homebuttons.css");
+        button=new Button[]{view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11};
         System.out.println(ReadWriteData.vechicles_Content.size());
         carArray = new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12};
         rectanglesArray =  new Rectangle[]{rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12};
         carImageViewsList.addAll(List.of(carArray));
+        Button_list.addAll(List.of(button));
         rectanglesList.addAll(List.of(rectanglesArray));
         displayCarImage();
         Hover();
     }
 
     public void ViewButtonClicked(ActionEvent event) {
-
         Button clickedButton = (Button) event.getSource();
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
 
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
-            Parent viewCarRoot = loader.load();
-
-            // Access the controller of the new scene
-            ViewToReserveController viewToReserveController = loader.getController();
-            viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
-
-            // Replace the content of the current scene with the new scene
-            rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
-            sceneLoader.makeFadeInTransition(rootPane);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        sceneLoader.loadCarDetails(rootPane, viewCar, carIndex);
     }
+
+
 
 
 

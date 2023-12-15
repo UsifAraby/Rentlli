@@ -26,7 +26,27 @@ public class SceneLoader {
         stage.show();
     }
 
+
+
+
+    public void loadCarDetails(AnchorPane rootPane, String viewCar, int carIndex) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
+            Parent viewCarRoot = loader.load();
+
+            // Access the controller of the new scene
+            ViewToReserveController viewToReserveController = loader.getController();
+            viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
+
+            // Replace the content of the current scene with the new scene
+            rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
+            makeFadeInTransition(rootPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void makefadeout(AnchorPane rootPane,String NScene){
+        makeFadeInTransition(rootPane);
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(rootPane);

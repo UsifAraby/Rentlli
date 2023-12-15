@@ -69,6 +69,20 @@ public class ReadWriteData {
     }
 
 
+
+
+    public static void writeVehiclesToFile() throws IOException{
+        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
+        BufferedWriter writer = new BufferedWriter(new FileWriter("vehicles.txt"));
+        System.out.println("writing...");
+        for (Vehicle vehicle:  vechicles_Content) {
+            writer.write(vehicle.toString());
+            writer.newLine();
+        }
+        writer.close();
+    }
+
+
     // Check if an email exists in the customer list using streams
     public static boolean isEmailInList(String email) {
         return customerContents.stream()
@@ -85,4 +99,28 @@ public class ReadWriteData {
         return vechicles_Content.stream()
                 .filter(vehicle -> vehicle.)
      }*/
+
+
+
+  /*  public static void deleteCarByCarId(int carId) {
+        int index = findCarIndexByCarId(carId);
+
+
+        if (index != -1) {
+            vechicles_Content.remove(index);
+            System.out.println("Car with ID " + carId + " deleted successfully.");
+        } else {
+            System.out.println("Car with ID " + carId + " not found.");
+        }
+    }
+
+    private static int findCarIndexByCarId(int carId) {
+        for (int i = 0; i < vechicles_Content.size(); i++) {
+            if (vechicles_Content.get(i).getVe_Id() == carId) {
+                return i; // Found the car, return its index
+            }
+        }
+        return -1;
+    }*/
+
 }

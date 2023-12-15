@@ -28,6 +28,7 @@ public class loginController implements Initializable {
 
     public String file = "customers.txt";
     public String homeScene = "HomePage.fxml";
+    public String Admin_scene="admincontrol.fxml";
     public String signScene = "signupScene.fxml";
     public boolean logged ;
 
@@ -58,37 +59,40 @@ public class loginController implements Initializable {
 
     public void logintrans(ActionEvent event) throws IOException {
         if (validateInputs_Login()) {
-
-            if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
+            if (isSpecialCaseAdminLogin()) {
+                System.out.println("ADMIN");
+                sceneLoader.loadNextScene(rootPane, Admin_scene);
+                System.out.println("Admin logged in successfully!");
+            } else if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
+                // Handle normal user login
                 sceneLoader.makefadeout(rootPane, homeScene);
-                System.out.println("logged in succefully!");
-            }
-                else {
-                ERROR.setTitle("ERROR");
-                ERROR.setHeaderText("Wrong Email Or Password!");
-                ERROR.setContentText("Click Ok To Continue: ");
-                ERROR.showAndWait();
+                System.out.println(ReadWriteData.customerContents.get(0).getCostumer_ID());;
+                System.out.println("Normal user logged in successfully!");
+            } else {
+                // Handle invalid credentials for both admin and normal user
+                showErrorAlert("Wrong Email Or Password!");
             }
         } else {
+            // Handle input validation errors
             if (!email.getText().isEmpty()) {
-                ERROR.setTitle("ERROR");
-                ERROR.setHeaderText("Enter Password!");
-                ERROR.setContentText("Click Ok To Continue: ");
-                ERROR.showAndWait();
-            }else {
-                ERROR.setTitle("ERROR");
-                ERROR.setHeaderText("Enter Email Adress!");
-                ERROR.setContentText("Click Ok To Continue: ");
-                ERROR.showAndWait();}
-            if (email.getText().isEmpty() && password.getText().isEmpty()){
-                ERROR.setTitle("ERROR");
-                ERROR.setHeaderText("Please enter Email And Password");
-                ERROR.setContentText("Click Ok To Continue: ");
-                ERROR.showAndWait();
+                showErrorAlert("Enter Password!");
+            } else if (email.getText().isEmpty() && password.getText().isEmpty()) {
+                showErrorAlert("Please enter Email And Password");
+            } else {
+                showErrorAlert("Enter Email Adress!");
             }
         }
     }
+    private boolean isSpecialCaseAdminLogin() {
+        return email.getText().equals("1") && password.getText().equals("1");
+    }
 
+    private void showErrorAlert(String message) {
+        ERROR.setTitle("ERROR");
+        ERROR.setHeaderText(message);
+        ERROR.setContentText("Click Ok To Continue: ");
+        ERROR.showAndWait();
+    }
 
     public void signuptrans2(ActionEvent event) throws IOException {
         sceneLoader.makefadeout(rootPane, signScene);
