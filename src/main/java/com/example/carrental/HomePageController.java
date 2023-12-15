@@ -68,6 +68,7 @@ public class HomePageController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    Parent viewCarRoot;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
@@ -83,24 +84,11 @@ public class HomePageController implements Initializable {
     }
 
     public void ViewButtonClicked(ActionEvent event) {
-        // Get the clicked button
         Button clickedButton = (Button) event.getSource();
-
-        // Extract the car index from the button ID
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
-            Parent viewCarRoot = loader.load();
-            ViewToReserveController viewToReserveController = loader.getController();
-            viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
-            rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
-            sceneLoader.makeFadeInTransition(rootPane);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+        sceneLoader.loadCarDetails(rootPane, viewCar, carIndex);
+}
 
 
         public void Hover() {
