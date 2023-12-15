@@ -68,12 +68,11 @@ public class HomePageController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    Parent viewCarRoot;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
         sceneLoader.makeFadeInTransition(rootPane);
-        gridPane.getStyleClass().add("homebuttons.css");
         System.out.println(ReadWriteData.vechicles_Content.size());
         carArray = new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12};
         rectanglesArray =  new Rectangle[]{rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12};
