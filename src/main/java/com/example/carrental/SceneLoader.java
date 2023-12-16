@@ -18,7 +18,7 @@ public class SceneLoader {
     private Parent root;
 
     public void loadNextScene(AnchorPane rootPane, String NScene) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(NScene));
+        FXMLLoader loader = new FXMLLoader(SceneLoader.class.getResource(NScene));
         root = loader.load();
         stage = (Stage) rootPane.getScene().getWindow();
         scene = new Scene(root);

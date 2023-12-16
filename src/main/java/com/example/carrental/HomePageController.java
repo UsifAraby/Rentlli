@@ -60,7 +60,7 @@ public class HomePageController implements Initializable {
     private GridPane gridPane;
 
     @FXML
-    Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
+   public Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
 
     SceneLoader sceneLoader = new SceneLoader();
     ViewToReserveController viewToReserveController = new ViewToReserveController();
@@ -68,6 +68,7 @@ public class HomePageController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    public static int index;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
@@ -87,10 +88,12 @@ public class HomePageController implements Initializable {
         Button clickedButton = (Button) event.getSource();
 
         // Extract the car index from the button ID
-        int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
+         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
+         index=carIndex;
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("carView.fxml"));
             Parent viewCarRoot = loader.load();
+            System.out.print(carIndex);
             ViewToReserveController viewToReserveController = loader.getController();
             viewToReserveController.setCarDetails(ReadWriteData.vechicles_Content.get(carIndex));
             rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
@@ -103,7 +106,7 @@ public class HomePageController implements Initializable {
 
 
 
-        public void Hover() {
+    public void Hover() {
 
         for (int i = 0 ; i<carImageViewsList.size() ; i++){
             setupHoverEffect(rectanglesList.get(i),carImageViewsList.get(i));
@@ -150,7 +153,7 @@ public class HomePageController implements Initializable {
         for (Vehicle vehicle : ReadWriteData.vechicles_Content) {
             int vId = vehicle.getVe_Id();
             String photoPath = vehicle.getPhoto();
-           // System.out.println(vId);
+            // System.out.println(vId);
 
             Image image = new Image(new File(photoPath).toURI().toString());
 
@@ -212,15 +215,6 @@ public class HomePageController implements Initializable {
 
 
         }
-    }
 
 
-
-
-
-
-}
-
-
-
-
+    }}

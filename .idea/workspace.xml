@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5eca6564-173d-4668-ba76-f64b25a3a610" name="Changes" comment="init commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/ViewToReserveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/ViewToReserveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/HomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/carView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/carView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vehicles.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -46,12 +49,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "beno",
-    "last_opened_file_path": "C:/Users/20114/Desktop/Rentlli",
+    "last_opened_file_path": "C:/Users/20114/Desktop/Rentlli/src/main/resources",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\20114\Desktop\Rentlli\src\main\resources" />
       <recent name="C:\Users\20114\Desktop\Rentlli\src\main\resources\com\example\carrental" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -235,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702593824705</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1702635767431</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702635767431</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

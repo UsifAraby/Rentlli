@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 
 public class Vehicle {
     //private Image photo;
+    featuers  feature=new featuers();
     public static  int  vehicle_Id = 0;
     public final int ve_Id;
     private String model;
