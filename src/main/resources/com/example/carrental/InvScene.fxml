@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.Invoice">
+   <children>
+      <ImageView fitHeight="810.0" fitWidth="1294.0" layoutX="-6.0" layoutY="-2.0">
+         <image>
+            <Image url="@../../../Your%20Invoice.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="519.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Compare Cars                     &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="20.0" layoutY="433.0" mnemonicParsing="false" onAction="#ReservationHistory" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Reservation History             &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="20.0" layoutY="341.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Car Agencys                        &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="20.0" layoutY="257.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Personal information          &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="94.0" fitWidth="181.0" layoutX="1.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../user%20icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="580.0" layoutY="171.0" prefHeight="27.0" prefWidth="72.0" stylesheets="@reservationButtons.css" text="  Name" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="570.0" layoutY="244.0" prefHeight="27.0" prefWidth="141.0" stylesheets="@reservationButtons.css" text="  Phone Number" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="403.0" prefHeight="27.0" prefWidth="150.0" stylesheets="@reservationButtons.css" text="  PickUp Location" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="570.0" layoutY="319.0" prefHeight="27.0" prefWidth="141.0" stylesheets="@reservationButtons.css" text="  Return Location" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="482.0" prefHeight="27.0" prefWidth="125.0" stylesheets="@reservationButtons.css" text="  PickUp Date" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="561.0" prefHeight="27.0" prefWidth="125.0" stylesheets="@reservationButtons.css" text="  Return Date" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="639.0" prefHeight="27.0" prefWidth="105.0" stylesheets="@reservationButtons.css" text="  Total Cost" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nl" layoutX="670.0" layoutY="171.0" prefHeight="27.0" prefWidth="274.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="phl" layoutX="726.0" layoutY="244.0" prefHeight="27.0" prefWidth="274.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rll" layoutX="726.0" layoutY="319.0" prefHeight="27.0" prefWidth="274.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pull" layoutX="726.0" layoutY="403.0" prefHeight="27.0" prefWidth="274.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pudl" layoutX="711.0" layoutY="482.0" prefHeight="27.0" prefWidth="274.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rdl" layoutX="700.0" layoutY="561.0" prefHeight="27.0" prefWidth="243.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="tcl" layoutX="682.0" layoutY="639.0" prefHeight="27.0" prefWidth="125.0" stylesheets="@textfields.css" textFill="#0a1228">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="1113.0" layoutY="20.0" mnemonicParsing="false" onAction="#Back" prefHeight="34.0" prefWidth="134.0" stylesheets="@BackButton.css" text="Back">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

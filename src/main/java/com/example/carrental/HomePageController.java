@@ -47,6 +47,7 @@ public class HomePageController implements Initializable {
     @FXML
     ImageView[] carArray ;
 
+
     public ArrayList<ImageView> carImageViewsList = new ArrayList<>();
     public ArrayList<Rectangle> rectanglesList = new ArrayList<>();
 
@@ -65,11 +66,9 @@ private Stage stage;
     Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
 
     SceneLoader sceneLoader = new SceneLoader();
-    ViewToReserveController viewToReserveController = new ViewToReserveController();
+    //ViewToReserveController viewToReserveController = new ViewToReserveController();
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
@@ -83,13 +82,15 @@ private Stage stage;
         displayCarImage();
         Hover();
     }
-
+public static int carI;
     public void ViewButtonClicked(ActionEvent event) {
-        // Get the clicked button
+
         Button clickedButton = (Button) event.getSource();
 
         // Extract the car index from the button ID
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
+        carI=carIndex;
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
             Parent viewCarRoot = loader.load();
@@ -159,59 +160,6 @@ private Stage stage;
             if (vId >= 0 && vId < carImageViewsList.size()) {
                 carImageViewsList.get(vId).setImage(image);
             }
-
-            /*switch (vId) {
-
-                case 0:
-                    carImageViewsList.get(0).setImage(image);
-                break;
-
-                case 1:
-                    carImageViewsList.get(1).setImage(image);
-                    break;
-
-                case 2:
-                    carImageViewsList.get(2).setImage(image);
-                    break;
-
-                case 3:
-                    carImageViewsList.get(3).setImage(image);
-                    break;
-
-                case 4:
-                    carImageViewsList.get(4).setImage(image);
-                    break;
-
-                case 5:
-                    carImageViewsList.get(5).setImage(image);
-                    break;
-
-                case 6:
-                    carImageViewsList.get(6).setImage(image);
-                    break;
-
-                case 7:
-                    carImageViewsList.get(7).setImage(image);
-                    break;
-
-                case 8:
-                carImageViewsList.get(8).setImage(image);
-                    break;
-
-                case 9:
-                    carImageViewsList.get(9).setImage(image);
-                    break;
-
-                case 10:
-                    carImageViewsList.get(10).setImage(image);
-                    break;
-
-                case 11:
-                    carImageViewsList.get(11).setImage(image);
-                    break;
-
-            }*/
-
 
         }
     }

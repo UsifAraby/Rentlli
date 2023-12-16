@@ -25,6 +25,7 @@ public class Main extends Application {
         try {
             ReadWriteData.readCustomers();
             ReadWriteData.readVehicles();
+            ReadWriteData.readInvoice();
             System.out.println(ReadWriteData.customerContents);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -33,6 +34,7 @@ public class Main extends Application {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 ReadWriteData.writeCustomersToFile();
+                ReadWriteData.writeInvoiceToFile();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

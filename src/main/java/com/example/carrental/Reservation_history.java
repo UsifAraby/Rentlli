@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class Reservation_history extends Reservation {
 
@@ -19,11 +20,12 @@ public class Reservation_history extends Reservation {
         private Scene scene;
         private Parent root;
 
+        public Reservation_history(String nameInput, String phoneNumberInput, String pickUpLocationInput, String returnLocationInput, String pickUpDateInput,String returnDateInput) {
+                super(nameInput, phoneNumberInput, pickUpLocationInput, returnLocationInput,pickUpDateInput,returnDateInput);
+        }
 
 
-
-
-        public void Back(ActionEvent event3) throws IOException {
+    public void Back(ActionEvent event3) throws IOException {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ReservScene.fxml"));
             root = loader.load();
 

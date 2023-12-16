@@ -10,6 +10,8 @@ public class Customer extends User {
     final int costumer_ID;
 
     String license;
+
+
     public Customer(){
 
         costumer_ID=cid;

@@ -3,6 +3,7 @@
 {
 
     -fx-background-color : transparent;
+    -fx-font-size: 20px;
 
 
 }
@@ -11,6 +12,7 @@
 {
 
     -fx-background-color : #030405;
+    -fx-font-size: 20px;
 
 
 }
@@ -21,7 +23,7 @@
 
     -fx-background-color : rgb(51, 149, 255);
     -fx-background-radius : 30 30 30 30 ;
-
+-fx-font-size: 20px;
 }
 
 .button:hover
@@ -29,6 +31,7 @@
 
     -fx-background-color : rgb(23, 96, 175);
     -fx-background-radius : 30 30 30 30 ;
+    -fx-font-size: 20px;
 
 }
 
@@ -37,6 +40,7 @@
 
        -fx-background-color : rgb(51, 149, 255);
        -fx-background-radius : 30 30 30 30 ;
+       -fx-font-size: 20px;
 
 }
 

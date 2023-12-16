@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.Reservation">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1280.0">
+         <image>
+            <Image url="@../../../Reservation%20layout.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="n" layoutX="367.0" layoutY="330.0" prefHeight="38.0" prefWidth="412.0" promptText="Name" stylesheets="@textfields.css" />
+      <TextField fx:id="pul" layoutX="367.0" layoutY="400.0" prefHeight="38.0" prefWidth="412.0" promptText="PickUp Location" stylesheets="@textfields.css" />
+      <TextField fx:id="rel" layoutX="367.0" layoutY="477.0" prefHeight="38.0" prefWidth="412.0" promptText="Return Location" stylesheets="@textfields.css" />
+      <TextField fx:id="ph" layoutX="367.0" layoutY="553.0" prefHeight="38.0" prefWidth="412.0" promptText="Phone Number" stylesheets="@textfields.css" />
+      <DatePicker fx:id="pud" layoutX="854.0" layoutY="335.0" prefHeight="35.0" prefWidth="412.0" promptText="PickUp Date" stylesheets="@textfields.css" />
+      <DatePicker fx:id="red" layoutX="854.0" layoutY="402.0" prefHeight="35.0" prefWidth="412.0" promptText="Return Date" stylesheets="@textfields.css" />
+      <TextField layoutX="854.0" layoutY="480.0" prefHeight="38.0" prefWidth="412.0" promptText="Total Cost " stylesheets="@textfields.css" />
+      <Button layoutX="684.0" layoutY="696.0" mnemonicParsing="false" onAction="#submit" prefHeight="56.0" prefWidth="253.0" stylesheets="@buttons.css" text="Reserve" textFill="#040625" />
+      <Button layoutY="237.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Personal information           &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutY="321.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Car Agencys                         &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Rvl" layoutY="413.0" mnemonicParsing="false" onAction="#ReservationHistory" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Reservation History             &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutY="499.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Compare Cars                     &gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="viewCarImage" fitHeight="356.0" fitWidth="612.0" layoutX="505.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="comboBox" layoutX="854.0" layoutY="562.0" prefHeight="35.0" prefWidth="412.0" stylesheets="@textfields.css" />
+   </children>
+</AnchorPane>

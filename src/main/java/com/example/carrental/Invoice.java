@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -19,6 +20,8 @@ public class Invoice extends Reservation {
         private Stage stage;
         private Scene scene;
         private Parent root;
+        @FXML
+        public AnchorPane rootPane;
         @FXML
         public Label nl;
         @FXML
@@ -35,17 +38,25 @@ public class Invoice extends Reservation {
         public  Label tcl;
 
 
+    public Invoice(String nameInput, String phoneNumberInput, String pickUpLocationInput, String returnLocationInput,String pickUpDateInput,String returnDateInput) {
+        super(nameInput, phoneNumberInput, pickUpLocationInput, returnLocationInput,pickUpDateInput,returnDateInput);
+    }
 
-        public void InvoiceSetting(String NameInput, String PhoneNumberInput, String PickUpLocationInput, String ReturnLocationInput, LocalDate PickUpDateInput, LocalDate ReturnDateInput) throws IOException {
-            nl.setText(NameInput);
-            phl.setText(PhoneNumberInput);
-            pull.setText(PickUpLocationInput);
-            rll.setText(ReturnLocationInput);
-            pudl.setText(String.valueOf(PickUpDateInput));
-            rdl.setText(String.valueOf(ReturnDateInput));
+public Invoice(){}
 
-        }
-        public void Back(ActionEvent event3) throws IOException{
+    public void InvoiceSetting(String NameInput, String PhoneNumberInput, String PickUpLocationInput, String ReturnLocationInput, LocalDate PickUpDateInput,LocalDate ReturnDateInput) throws IOException {
+        ReadWriteData.Invoice_Content.add(new Invoice(NameInput, PhoneNumberInput,PickUpLocationInput, ReturnLocationInput,PickUpDateInput.toString(),ReturnDateInput.toString()));
+        nl.setText(NameInput);
+        phl.setText(PhoneNumberInput);
+        pull.setText(PickUpLocationInput);
+        rll.setText(ReturnLocationInput);
+        pudl.setText(String.valueOf(PickUpDateInput));
+        rdl.setText(String.valueOf(ReturnDateInput));
+
+    }
+
+
+    public void Back(ActionEvent event3) throws IOException{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ReservScene.fxml"));
             root = loader.load();
 
@@ -79,5 +90,10 @@ public class Invoice extends Reservation {
             stage.setScene(scene);
             stage.show();
         }
+    @Override
+    public String toString() {
+
+        return NameInput + "," + PhoneNumberInput + "," + PickUpLocationInput + "," + ReturnLocationInput +","+PickUpDateInput.toString()+","+ReturnDateInput.toString()+"\n";
+    }
     }
 
