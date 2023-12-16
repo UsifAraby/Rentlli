@@ -2,6 +2,7 @@ package com.example.carrental;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -83,6 +84,8 @@ public class HomePageController implements Initializable {
 
     @FXML
     TextField Search;
+
+    public static int carI;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
@@ -107,7 +110,7 @@ public class HomePageController implements Initializable {
     public void ViewButtonClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
-
+        carI = carIndex;
         sceneLoader.loadCarDetails(rootPane, viewCar, carIndex);
     }
 
@@ -201,7 +204,24 @@ public void searchSwitch(){
 
 
 
+    public void ReservationHistory(ActionEvent event2) throws IOException{
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Reservation History.fxml"));
+        root = loader.load();
+
+        Reservation_history reservation_history = loader.getController();
+
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(1000), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.play();
+
+        stage=(Stage)((Node)event2.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 }

@@ -5,32 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eca6564-173d-4668-ba76-f64b25a3a610" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/AddSceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/CarAgencyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/ModifySceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/RemoveCarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/SearchSceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/addScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/adminbuttons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/caragency.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/combobox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/deletescene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/filtercontent.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/modify.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/searcheScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Reservation_history.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/BackButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/InvScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/ReservScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/Reservation History.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/reservationButtons.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/customers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Admin_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Admin_controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/ReadWriteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/ReadWriteData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/SceneLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/HomePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/admincontrol.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/admincontrol.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/admincontroler.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/viewlabels.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/viewlabels.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/carrental/ViewToReserveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/carrental/ViewToReserveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/carView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/carView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/modify.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/modify.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/carrental/textfields.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/carrental/textfields.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vehicles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vehicles.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702641495172</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1702710926631</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702710926631</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

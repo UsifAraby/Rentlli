@@ -1,5 +1,15 @@
 .text-field {
     -fx-background-color: transparent;
     -fx-background-insets: 0;
+         -fx-font-weight: bold;
 }
-
+.date-picker{
+ -fx-background-color: transparent;
+    -fx-background-insets: 0;
+         -fx-font-weight: bold;
+}
+.combo-box{
+ -fx-background-color: transparent;
+    -fx-background-insets: 0;
+         -fx-font-weight: bold;
+    }

@@ -42,7 +42,7 @@
             <Image url="@../../../user%20icon.png" />
          </image>
       </ImageView>
-      <Label layoutX="736.0" layoutY="8.0" prefHeight="47.0" prefWidth="148.0" text="Add Control" textFill="#1daad9">
+      <Label layoutX="736.0" layoutY="8.0" prefHeight="47.0" prefWidth="148.0" text="Edit Control" textFill="#1daad9">
          <font>
             <Font size="26.0" />
          </font>
@@ -90,5 +90,6 @@
       </Button>
       <ImageView fx:id="carImage" fitHeight="259.0" fitWidth="430.0" layoutX="615.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
       <ComboBox fx:id="caragencybox" layoutX="367.0" layoutY="576.0" prefHeight="26.0" prefWidth="409.0" />
+      <ComboBox fx:id="choosecarId" layoutX="1175.0" layoutY="230.0" prefHeight="26.0" prefWidth="75.0" />
    </children>
 </AnchorPane>
