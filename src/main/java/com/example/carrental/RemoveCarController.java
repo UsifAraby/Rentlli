@@ -22,12 +22,18 @@ HomePageController homePageController = new HomePageController();
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sceneLoader.makeFadeInTransition(rootPane);
 
-        carIdComboBox.getItems().addAll(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+        int numVehicles = ReadWriteData.vechicles_Content.size();
+        for (int i = 0; i < numVehicles; i++) {
+            carIdComboBox.getItems().add(i);
+        }
     }
+
     public void Delete_car(ActionEvent event) {
-        int selectedCarId = carIdComboBox.getValue();
-        ReadWriteData.vechicles_Content.remove(selectedCarId);
-        homePageController.rectanglesList.remove(selectedCarId);
+        Integer selectedCarId = carIdComboBox.getValue();
+        if (selectedCarId != null) {
+            ReadWriteData.vechicles_Content.remove(selectedCarId.intValue());
+            homePageController.rectanglesList.remove(selectedCarId.intValue());
+        }
     }
 
 }

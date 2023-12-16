@@ -105,7 +105,7 @@
             <Font size="37.0" />
          </font>
       </Button>
-      <Button fx:id="editButton" layoutX="1095.0" layoutY="367.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="88.0" stylesheets="@adminbuttons.css" text="Edit" textFill="WHITE">
+      <Button fx:id="editButton" layoutX="1095.0" layoutY="367.0" mnemonicParsing="false" onAction="#toModify" prefHeight="57.0" prefWidth="88.0" stylesheets="@adminbuttons.css" text="Edit" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
@@ -115,5 +115,10 @@
             <Font size="60.0" />
          </font>
       </Label>
+      <Button fx:id="LogoutButton" layoutX="111.0" layoutY="644.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: red;" stylesheets="@buttons.css" text="LogOut">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

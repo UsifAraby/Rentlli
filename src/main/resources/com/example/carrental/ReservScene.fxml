@@ -22,7 +22,6 @@
         <TextField fx:id="ph" layoutX="367.0" layoutY="553.0" prefHeight="38.0" prefWidth="412.0" promptText="Phone Number" stylesheets="@textfields.css" />
         <DatePicker fx:id="pud" layoutX="854.0" layoutY="335.0" prefHeight="35.0" prefWidth="412.0" promptText="PickUp Date" stylesheets="@textfields.css" />
         <DatePicker fx:id="red" layoutX="854.0" layoutY="402.0" prefHeight="35.0" prefWidth="412.0" promptText="Return Date" stylesheets="@textfields.css" />
-        <TextField layoutX="854.0" layoutY="480.0" prefHeight="38.0" prefWidth="412.0" promptText="Total Cost " stylesheets="@textfields.css" />
         <Button layoutX="684.0" layoutY="696.0" mnemonicParsing="false" onAction="#submit" prefHeight="56.0" prefWidth="253.0" stylesheets="@buttons.css" text="Reserve" textFill="#040625" />
         <Button layoutY="237.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="345.0" stylesheets="@homebuttons.css" text="Personal information           &gt;" textFill="WHITE">
             <font>

@@ -52,6 +52,7 @@ public class Invoice extends Reservation {
         rll.setText(ReturnLocationInput);
         pudl.setText(String.valueOf(PickUpDateInput));
         rdl.setText(String.valueOf(ReturnDateInput));
+        tcl.setText(String.valueOf((ReadWriteData.vechicles_Content.get(HomePageController.carI)).getPrice()));
 
     }
 

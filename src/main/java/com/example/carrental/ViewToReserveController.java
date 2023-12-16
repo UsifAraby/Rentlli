@@ -73,7 +73,7 @@ public class ViewToReserveController implements Initializable {
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
-                sceneLoader.makeFadeInTransition(rootPane);
+            sceneLoader.makeFadeInTransition(rootPane);
         }
 
         public void setCarDetails(Vehicle car) {
@@ -85,9 +85,5 @@ public class ViewToReserveController implements Initializable {
                 Image image = new Image(new File(photoPath).toURI().toString());
                 viewCarImage.setImage(image);
         }
-
-
-
-
 
 }

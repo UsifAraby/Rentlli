@@ -39,17 +39,17 @@ public class HomePageController implements Initializable {
     public AnchorPane rootPane;
 
     @FXML
-    Rectangle rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12;
+    Rectangle rectangle1, rectangle2, rectangle3, rectangle4, rectangle5, rectangle6, rectangle7, rectangle8, rectangle9, rectangle10, rectangle11, rectangle12;
     @FXML
-    public Rectangle[] rectanglesArray ;
+    public Rectangle[] rectanglesArray;
     @FXML
-    ImageView car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12;
+    ImageView car1, car2, car3, car4, car5, car6, car7, car8, car9, car10, car11, car12;
     @FXML
-    ImageView[] carArray ;
+    ImageView[] carArray;
 
     public ArrayList<ImageView> carImageViewsList = new ArrayList<>();
     public ArrayList<Rectangle> rectanglesList = new ArrayList<>();
-    public ArrayList<Button> Button_list=new ArrayList<>();
+    public ArrayList<Button> Button_list = new ArrayList<>();
     public ArrayList<Label> PriceLabelList = new ArrayList<>();
     public ArrayList<Label> CarLabelList = new ArrayList<>();
     public static ArrayList<Vehicle> carAgencyFilterContent = new ArrayList<>();
@@ -63,15 +63,15 @@ public class HomePageController implements Initializable {
     private GridPane gridPane;
 
     @FXML
-    Button view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11;
-    Button []button;
+    Button view0, view1, view2, view3, view4, view5, view6, view7, view8, view9, view10, view11;
+    Button[] button;
 
     @FXML
-    Label label0,label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11;
+    Label label0, label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11;
 
     Label[] labels;
     @FXML
-    Label agency0,agency1,agency2,agency3,agency4,agency5,agency6,agency7,agency8,agency9,agency10,agency11;
+    Label agency0, agency1, agency2, agency3, agency4, agency5, agency6, agency7, agency8, agency9, agency10, agency11;
     Label[] agencyLabels;
     SceneLoader sceneLoader = new SceneLoader();
     ViewToReserveController viewToReserveController = new ViewToReserveController();
@@ -86,17 +86,18 @@ public class HomePageController implements Initializable {
     TextField Search;
 
     public static int carI;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
         sceneLoader.makeFadeInTransition(rootPane);
         gridPane.getStyleClass().add("homebuttons.css");
-        button=new Button[]{view0,view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11};
+        button = new Button[]{view0, view1, view2, view3, view4, view5, view6, view7, view8, view9, view10, view11};
         System.out.println(ReadWriteData.vechicles_Content.size());
-        carArray = new ImageView[]{car1, car2, car3, car4, car5, car6,car7,car8,car9,car10,car11,car12};
-        rectanglesArray =  new Rectangle[]{rectangle1,rectangle2,rectangle3,rectangle4,rectangle5,rectangle6,rectangle7,rectangle8,rectangle9,rectangle10,rectangle11,rectangle12};
-        labels = new Label[]{label0,label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11};
-        agencyLabels = new Label[]{agency0,agency1,agency2,agency3,agency4,agency5,agency6,agency7,agency8,agency9,agency10,agency11};
+        carArray = new ImageView[]{car1, car2, car3, car4, car5, car6, car7, car8, car9, car10, car11, car12};
+        rectanglesArray = new Rectangle[]{rectangle1, rectangle2, rectangle3, rectangle4, rectangle5, rectangle6, rectangle7, rectangle8, rectangle9, rectangle10, rectangle11, rectangle12};
+        labels = new Label[]{label0, label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11};
+        agencyLabels = new Label[]{agency0, agency1, agency2, agency3, agency4, agency5, agency6, agency7, agency8, agency9, agency10, agency11};
         carImageViewsList.addAll(List.of(carArray));
         rectanglesList.addAll(List.of(rectanglesArray));
         Button_list.addAll(List.of(button));
@@ -104,7 +105,7 @@ public class HomePageController implements Initializable {
         CarLabelList.addAll(List.of(agencyLabels));
         displayCarImage();
         Hover();
-        caragencybox.getItems().addAll("Al Mansour","Ezz Elarab","Abou Ghaly","Kasrawy");
+        caragencybox.getItems().addAll("Al Mansour", "Ezz Elarab", "Abou Ghaly", "Kasrawy");
     }
 
     public void ViewButtonClicked(ActionEvent event) {
@@ -115,30 +116,49 @@ public class HomePageController implements Initializable {
     }
 
 
-public void CarAgencySwitch(){
+    public void CarAgencySwitch() {
 
-    for (int i = 0 ; i < ReadWriteData.vechicles_Content.size(); i++){
+        for (int i = 0; i < ReadWriteData.vechicles_Content.size(); i++) {
 
-                    if (ReadWriteData.vechicles_Content.get(i).getCarAgency().equals(caragencybox.getValue())){
-                        carAgencyFilterContent.add(ReadWriteData.vechicles_Content.get(i));
-                    }
+            if (ReadWriteData.vechicles_Content.get(i).getCarAgency().equals(caragencybox.getValue())) {
+                carAgencyFilterContent.add(ReadWriteData.vechicles_Content.get(i));
+            }
         }
-                        sceneLoader.makefadeout(rootPane, "caragency.fxml");
-                        System.out.println(carAgencyFilterContent);
+        sceneLoader.makefadeout(rootPane, "caragency.fxml");
+        System.out.println(carAgencyFilterContent);
+    }
 
-}
-
-public void searchSwitch(){
+    public void searchSwitch() {
 
 
-    for (int i = 0 ; i < ReadWriteData.vechicles_Content.size(); i++){
+        for (int i = 0; i < ReadWriteData.vechicles_Content.size(); i++) {
 
-        if (ReadWriteData.vechicles_Content.get(i).getMake().equals(Search.getText())){
-            searchFilterContent.add(ReadWriteData.vechicles_Content.get(i));
+            if (ReadWriteData.vechicles_Content.get(i).getMake().equals(Search.getText())) {
+                searchFilterContent.add(ReadWriteData.vechicles_Content.get(i));
+            }
         }
-    }       sceneLoader.makefadeout(rootPane,"searcheScene.fxml");
+        sceneLoader.makefadeout(rootPane, "searcheScene.fxml");
 
-}
+    }
+
+    public void ReservationHistory(ActionEvent event2) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Reservation History.fxml"));
+        root = loader.load();
+
+
+        Reservation_history reservation_history = loader.getController();
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(1000), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.play();
+
+        stage = (Stage) ((Node) event2.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
     public void Hover() {
@@ -202,26 +222,38 @@ public void searchSwitch(){
         }
     }
 
+    public void switchtocompare (ActionEvent event) throws IOException{
 
-
-    public void ReservationHistory(ActionEvent event2) throws IOException{
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Reservation History.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("compare.fxml"));
         root = loader.load();
-
-        Reservation_history reservation_history = loader.getController();
-
-
+        compare c = loader.getController();
         FadeTransition fadeTransition = new FadeTransition(Duration.millis(1000), root);
         fadeTransition.setFromValue(0);
         fadeTransition.setToValue(1);
         fadeTransition.play();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
-        stage=(Stage)((Node)event2.getSource()).getScene().getWindow();
-        scene=new Scene(root);
+    }
+
+
+    public void logOut(ActionEvent e) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScene.fxml"));
+        root = loader.load();
+        loginController l = loader.getController();
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(1000), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.play();
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
 
 
 }

@@ -2,9 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.Reservation_history">
@@ -49,7 +51,50 @@
                 <Font size="36.0" />
             </font>
         </Label>
-        <Label layoutX="378.0" layoutY="186.0" prefHeight="53.0" prefWidth="69.0" stylesheets="@reservationButtons.css" text="   Your ID :" textFill="WHITE" />
         <Label fx:id="idh" layoutX="462.0" layoutY="186.0" prefHeight="53.0" prefWidth="248.0" />
+      <ScrollPane fx:id="scrollPane" layoutX="353.0" layoutY="314.0" prefHeight="670.0" prefWidth="924.0" translateY="-200.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="256.0" prefWidth="922.0">
+               <children>
+                  <Label fx:id="reservatoinnnumber" text="label" translateX="480.0" translateY="35.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reservatoinname" text="label" translateX="280.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reservatoinReturnLocation" text="label" translateX="680.0" translateY="-35.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="reservecar" fitHeight="201.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true" translateY="-100.0" />
+                  <Label fx:id="reservationpickuplocation" text="Label" translateX="280.0" translateY="-170.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reservatoinpickUpDate" text="label" translateX="480.0" translateY="-205.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="CancelButton" mnemonicParsing="false" style="-fx-background-color: red;" stylesheets="@buttons.css" text="Cancel" textFill="WHITE" translateX="680.0" translateY="-150.0">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="reservatoinreturnDate" text="label" translateX="680.0" translateY="-295.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
     </children>
 </AnchorPane>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1280.0" stylesheets="homebuttons.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.compare">
+    <children>
+        <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../homepage%20small%20layout.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="-1.0" layoutY="494.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Compare Cars                     &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button layoutX="-2.0" layoutY="237.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Personal information           &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button layoutX="-2.0" layoutY="327.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="car Agencys                         &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button layoutX="-1.0" layoutY="410.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Reservation History             &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <ScrollPane fx:id="scrollPane" layoutX="373.0" layoutY="88.0" prefHeight="700.0" prefWidth="902.0" style="-fx-background-color: transparent;" styleClass="scrollPane" stylesheets="@homebuttons.css">
+            <content>
+                <GridPane fx:id="gridPane" prefHeight="1485.0" prefWidth="888.0" style="-fx-background-color: transparent;" styleClass="gridPane">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="294.2000030517578" minHeight="10.0" prefHeight="294.2000030517578" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="368.4" minHeight="10.0" prefHeight="286.39997558593757" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="288.0000244140625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="288.0000244140625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="288.0000244140625" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100; -fx-scale-x: 1; -fx-scale-y: 1;" width="235.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle5" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle6" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car1" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car2" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car3" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car4" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car5" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car6" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="myCheckBox0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="180.0" translateY="80.0">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <Rectangle fx:id="rectangle7" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car7" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle8" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car8" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle9" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car9" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle10" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car10" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle11" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car11" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle12" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car12" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <CheckBox fx:id="myCheckBox1" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox2" layoutX="307.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="2">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox3" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox4" layoutX="10.0" layoutY="444.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox5" layoutX="307.0" layoutY="444.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox6" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox7" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox8" layoutX="307.0" layoutY="741.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox9" layoutX="10.0" layoutY="444.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox10" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="myCheckBox11" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#select" prefWidth="77.0" text="Select" translateX="160.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                        <Button mnemonicParsing="false" onAction="#comparebtn" stylesheets="@buttons.css" text="Compare" textFill="WHITE" translateX="53.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+        <Label layoutX="557.0" layoutY="20.0" stylesheets="@buttons.css" text=" Select Only 2 Cars To Compare " textFill="#2a4fa4">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="94.0" fitWidth="181.0" layoutX="-9.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../Rentlli/src/main/resources/user%20icon.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="1130.0" layoutY="24.0" mnemonicParsing="false" onAction="#BackToHome" stylesheets="@BackButton.css" text="Back" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

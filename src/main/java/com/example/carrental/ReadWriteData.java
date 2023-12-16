@@ -10,6 +10,7 @@ public class ReadWriteData {
     public static ArrayList <Customer> customerContents = new ArrayList<>();
     public static ArrayList<Vehicle> vechicles_Content= new ArrayList<>();
     public static ArrayList<Invoice> Invoice_Content=new ArrayList<>();
+    public static ArrayList<Reservation> Reservation_contents=new ArrayList<>();
 
     public static void readCustomers() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader("customers.txt"))) {
@@ -59,8 +60,6 @@ public class ReadWriteData {
                 if (parts.length >= 6) {
 
                     Invoice invoice = new Invoice(parts[0], parts[1], parts[2], parts[3],parts[4],parts[5]);
-                    /*Reservation_history reservation_history=new Reservation_history(parts[0],parts[1],parts[2],parts[3],parts[4],parts[5] );
-                    Reservation_Content.add(reservation_history);*/
                     Invoice_Content.add(invoice);
                 } else {
 
@@ -69,6 +68,30 @@ public class ReadWriteData {
             }
         }
     }
+
+
+    public static void readReservationHistory() throws IOException {
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("reservationHistory.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+
+                String[] parts = line.split(",");
+
+                if (parts.length >= 6) {
+
+                    Reservation reservation = new Reservation(parts[0], parts[1], parts[2], parts[3],parts[4],parts[5]);
+                    Reservation_contents.add(reservation);
+                } else {
+
+                    System.out.println("Invalid data format in line: " + line);
+                }
+            }
+        }
+
+    }
+
+
 
     public static void writeCustomersToFile() throws IOException{
         BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt"));
@@ -96,7 +119,18 @@ public class ReadWriteData {
 
     public static void writeInvoiceToFile() throws IOException{
 
-        BufferedWriter writer = new BufferedWriter(new FileWriter("reservation.txt",true));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("reservation.txt"));
+        System.out.println("writing...");
+        for (Invoice invoice : Invoice_Content) {
+            writer.write(invoice.toString());
+            writer.newLine();
+        }
+        writer.close();
+    }
+
+    public static void writereservationToFile() throws IOException{
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter("reservationHistory.txt"));
         System.out.println("writing...");
         for (Invoice invoice : Invoice_Content) {
             writer.write(invoice.toString());
