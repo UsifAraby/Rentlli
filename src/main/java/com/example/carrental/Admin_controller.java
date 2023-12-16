@@ -13,21 +13,26 @@ import java.util.ResourceBundle;
 public class Admin_controller implements Initializable {
     @FXML
     private AnchorPane rootPane;
-    @FXML
-    private ComboBox<Integer> carIdComboBox;
-
     private SceneLoader sceneLoader = new SceneLoader();
+
+    @FXML
+    Button removeButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sceneLoader.makeFadeInTransition(rootPane);
-
-        // Populate the ComboBox with values from 1 to 12
-        carIdComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
     }
 
-    public void Delete_car(ActionEvent event) {
-        int selectedCarId = carIdComboBox.getValue(); // Get the selected value from ComboBox
-        ReadWriteData.vechicles_Content.remove(selectedCarId);
+    public void toDeletePage(ActionEvent e){
+        sceneLoader.makefadeout(rootPane, "deletescene.fxml");
     }
+
+    public void toِِAddPage(ActionEvent e){
+        sceneLoader.makefadeout(rootPane, "addScene.fxml");
+    }
+
+    public void toModify(ActionEvent e){
+        sceneLoader.makefadeout(rootPane, "");
+    }
+
 }

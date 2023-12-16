@@ -60,14 +60,14 @@ public class loginController implements Initializable {
     public void logintrans(ActionEvent event) throws IOException {
         if (validateInputs_Login()) {
             if (isSpecialCaseAdminLogin()) {
+                sceneLoader.loadNextScene(rootPane, "admincontrol.fxml");
                 System.out.println("ADMIN");
-                sceneLoader.loadNextScene(rootPane, Admin_scene);
                 System.out.println("Admin logged in successfully!");
             } else if ((ReadWriteData.isEmailInList(email.getText()) && ReadWriteData.isPasswordInList(password.getText()))) {
                 // Handle normal user login
                 sceneLoader.makefadeout(rootPane, homeScene);
                 System.out.println(ReadWriteData.customerContents.get(0).getCostumer_ID());;
-                System.out.println("Normal user logged in successfully!");
+                System.out.println("Customer logged in successfully!");
             } else {
                 // Handle invalid credentials for both admin and normal user
                 showErrorAlert("Wrong Email Or Password!");
@@ -97,7 +97,5 @@ public class loginController implements Initializable {
     public void signuptrans2(ActionEvent event) throws IOException {
         sceneLoader.makefadeout(rootPane, signScene);
     }
-
-
 
 }

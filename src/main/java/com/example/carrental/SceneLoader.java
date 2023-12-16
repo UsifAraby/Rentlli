@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SceneLoader {
 
@@ -27,7 +28,22 @@ public class SceneLoader {
     }
 
 
+    public void loadCarDetails(AnchorPane rootPane, String viewCar, int carIndex, ArrayList<Vehicle> contenet) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(viewCar));
+            Parent viewCarRoot = loader.load();
 
+            // Access the controller of the new scene
+            ViewToReserveController viewToReserveController = loader.getController();
+            viewToReserveController.setCarDetails(contenet.get(carIndex));
+
+            // Replace the content of the current scene with the new scene
+            rootPane.getChildren().setAll(viewCarRoot.getChildrenUnmodifiable());
+            makeFadeInTransition(rootPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void loadCarDetails(AnchorPane rootPane, String viewCar, int carIndex) {
         try {
@@ -73,6 +89,7 @@ public class SceneLoader {
         fadeTransition.play();
 
     }
+
 
 
 }

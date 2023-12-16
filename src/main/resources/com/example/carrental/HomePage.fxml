@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -23,7 +26,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="-2.0" layoutY="327.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="car Agencys                         &gt;" textFill="WHITE">
+      <Button fx:id="carAgencyButton" layoutX="-2.0" layoutY="327.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="car Agencys                         &gt;" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -138,6 +141,126 @@
                         <Font size="15.0" />
                      </font>
                   </Button>
+                  <Label fx:id="label0" text="35$" translateX="50.0" translateY="80.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label1" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label2" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label3" text="Label" translateX="50.0" translateY="80.0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label4" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label5" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label6" text="Label" translateX="50.0" translateY="80.0" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label7" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label8" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label9" text="Label" translateX="50.0" translateY="80.0" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label10" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label11" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency0" stylesheets="@viewlabels.css" text="Label0" translateX="100.0" translateY="-80.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency1" stylesheets="@viewlabels.css" text="Label1" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency2" stylesheets="@viewlabels.css" text="Label2" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency3" stylesheets="@viewlabels.css" text="Label3" translateX="100.0" translateY="-80.0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency4" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency5" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency6" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency7" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency8" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency9" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency10" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="agency11" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
          </content>
@@ -152,5 +275,16 @@
             <Image url="@../../../user%20icon.png" />
          </image>
       </ImageView>
+      <ComboBox fx:id="caragencybox" layoutX="194.0" layoutY="347.0" onAction="#CarAgencySwitch" opacity="0.0" prefWidth="150.0" />
+      <TextField fx:id="Search" layoutX="405.0" layoutY="21.0" prefHeight="38.0" prefWidth="739.0" promptText="Search" stylesheets="@textfields.css">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <Button fx:id="searchButton" layoutX="1123.0" layoutY="23.0" mnemonicParsing="false" onAction="#searchSwitch" stylesheets="@buttons.css" text="search">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -11,6 +11,8 @@ public class Vehicle {
     private String make;
     String licencePlate;
     String photo_Path;
+    String Price;
+    String carAgency;
     private final String year_of_Manufacture;
     //public int num_of_Features;
     //String [] features;
@@ -18,7 +20,7 @@ public class Vehicle {
     public boolean rental_Status;
     public int rental_rate_per_Hour;
 
-    public Vehicle( String licencePlate,String model, String make, String color, String yearOfManufacture, String photo_Path) {
+    public Vehicle( String licencePlate,String model, String make, String color, String yearOfManufacture,String Price,String carAgency, String photo_Path) {
         ve_Id=vehicle_Id;
         vehicle_Id++;
 
@@ -26,7 +28,9 @@ public class Vehicle {
         this.model=model;
         this.make=make;
         this.color=color;
-        year_of_Manufacture = yearOfManufacture;
+        this.year_of_Manufacture = yearOfManufacture;
+        this.Price = Price;
+        this.carAgency = carAgency;
         this.photo_Path = photo_Path;
        // this.photo= new Image(photo_Path);
 
@@ -60,13 +64,20 @@ public class Vehicle {
         return make;
     }
 
+    public String getPrice() {
+        return Price;
+    }
+
+    public String getCarAgency() {
+        return carAgency;
+    }
 
     public String getYear_of_Manufacture() {
         return year_of_Manufacture;
     }
 
     public String toString() {
-        return licencePlate +"," + make + "," + model + "," + color + "," + year_of_Manufacture + "," + photo_Path + ","+"\n";
+        return licencePlate +"," + make + "," + model + "," + color + "," + year_of_Manufacture + "," + Price + "," + carAgency + "," + photo_Path + ","+"\n";
     }
 
 }

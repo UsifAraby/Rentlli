@@ -1,0 +1,12 @@
+.transparent-combobox .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.transparent-combobox .list-cell {
+    -fx-background-color: transparent;
+}
+
+.transparent-combobox .text-field {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0, 1;
+}

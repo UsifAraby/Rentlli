@@ -10,21 +10,15 @@ public class ReadWriteData {
     public static ArrayList <Customer> customerContents = new ArrayList<>();
     public static ArrayList<Vehicle> vechicles_Content= new ArrayList<>();
     public static void readCustomers() throws IOException {
-        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader("customers.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Split the line into parts using a delimiter (assuming it's, for example, a comma)
                 String[] parts = line.split(",");
-                /*4,4,4,4,4,4*/
-                if (parts.length >= 6) {
-                    // Assuing your Customer class has a constructor that accepts parameters like email, password, etc.
-                    Customer customer = new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
 
-                    // Add the created Customer object to the list
+                if (parts.length >= 6) {
+                    Customer customer = new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
                     customerContents.add(customer);
                 } else {
-                    // Handle the case where the line doesn't have enough parts
                     System.out.println("Invalid data format in line: " + line);
                 }
             }
@@ -34,31 +28,24 @@ public class ReadWriteData {
 
     }
     public static void readVehicles() throws IOException {
-        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader("vehicles.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Split the line into parts using a delimiter (assuming it's, for example, a comma)
                 String[] parts = line.split(",");
 
-                if (parts.length >= 5) {
-                    // Assuming your vehicle class has a constructor that accepts parameters like email, password, etc.
-                    Vehicle vehicle = new Vehicle(parts[0], parts[1], parts[2], parts[3], parts[4],parts[5]);
+                if (parts.length >= 8) {
+                    Vehicle vehicle = new Vehicle(parts[0], parts[1], parts[2], parts[3], parts[4],parts[5],parts[6],parts[7]);
 
-                    // Add the created Customer object to the list
                     vechicles_Content.add(vehicle);
-                    System.out.println(vechicles_Content);
+                    System.out.println(vechicles_Content.get(0).getPrice());
                 } else {
-                    // Handle the case where the line doesn't have enough parts
                     System.out.println("Invalid data format in line: " + line);
                 }
             }
         }
     }
 
-    // Write the contents of the customerContents list to a file
     public static void writeCustomersToFile() throws IOException{
-        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
         BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt"));
         System.out.println("writing...");
         for (Customer customer : customerContents) {
@@ -72,7 +59,6 @@ public class ReadWriteData {
 
 
     public static void writeVehiclesToFile() throws IOException{
-        //String filepath = "C:/Users/user/Desktop/Rentlli/customers.txt";
         BufferedWriter writer = new BufferedWriter(new FileWriter("vehicles.txt"));
         System.out.println("writing...");
         for (Vehicle vehicle:  vechicles_Content) {
@@ -83,44 +69,17 @@ public class ReadWriteData {
     }
 
 
-    // Check if an email exists in the customer list using streams
     public static boolean isEmailInList(String email) {
         return customerContents.stream()
                 .anyMatch(customer -> customer.getEmail_Adress().equals(email));
     }
 
-    // Check if a password exists in the customer list using streams
     public static boolean isPasswordInList(String password) {
         return customerContents.stream()
                 .anyMatch(customer -> customer.getPassword().equals(password));
     }
-/*
-     public static String getCarPhotoPathById(String carId){
-        return vechicles_Content.stream()
-                .filter(vehicle -> vehicle.)
-     }*/
 
 
 
-  /*  public static void deleteCarByCarId(int carId) {
-        int index = findCarIndexByCarId(carId);
-
-
-        if (index != -1) {
-            vechicles_Content.remove(index);
-            System.out.println("Car with ID " + carId + " deleted successfully.");
-        } else {
-            System.out.println("Car with ID " + carId + " not found.");
-        }
-    }
-
-    private static int findCarIndexByCarId(int carId) {
-        for (int i = 0; i < vechicles_Content.size(); i++) {
-            if (vechicles_Content.get(i).getVe_Id() == carId) {
-                return i; // Found the car, return its index
-            }
-        }
-        return -1;
-    }*/
 
 }

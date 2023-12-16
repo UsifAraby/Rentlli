@@ -1,38 +1,25 @@
 package com.example.carrental;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import javafx.animation.FadeTransition;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import javafx.util.Duration;
 
-import java.net.URL;
-import java.time.format.TextStyle;
-import java.util.ResourceBundle;
-
-public class HomePageController implements Initializable {
-
-    String viewCar = "carView.fxml";
+public class SearchSceneController implements Initializable {
 
     @FXML
     public AnchorPane rootPane;
@@ -51,9 +38,6 @@ public class HomePageController implements Initializable {
     public ArrayList<Button> Button_list=new ArrayList<>();
     public ArrayList<Label> PriceLabelList = new ArrayList<>();
     public ArrayList<Label> CarLabelList = new ArrayList<>();
-    public static ArrayList<Vehicle> carAgencyFilterContent = new ArrayList<>();
-    public static ArrayList<Vehicle> searchFilterContent = new ArrayList<>();
-
 
     @FXML
     private ScrollPane scrollPane;
@@ -74,15 +58,14 @@ public class HomePageController implements Initializable {
     Label[] agencyLabels;
     SceneLoader sceneLoader = new SceneLoader();
     ViewToReserveController viewToReserveController = new ViewToReserveController();
-    @FXML
-    private ComboBox<String> caragencybox;
-
     private Stage stage;
     private Scene scene;
     private Parent root;
 
     @FXML
     TextField Search;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rootPane.setOpacity(0);
@@ -99,43 +82,19 @@ public class HomePageController implements Initializable {
         Button_list.addAll(List.of(button));
         PriceLabelList.addAll(List.of(labels));
         CarLabelList.addAll(List.of(agencyLabels));
-        displayCarImage();
+        displaysearchCars();
         Hover();
-        caragencybox.getItems().addAll("Al Mansour","Ezz Elarab","Abou Ghaly","Kasrawy");
     }
+
+
 
     public void ViewButtonClicked(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
         int carIndex = Integer.parseInt(clickedButton.getId().substring(4));
 
-        sceneLoader.loadCarDetails(rootPane, viewCar, carIndex);
+        sceneLoader.loadCarDetails(rootPane, "carView.fxml", carIndex,HomePageController.searchFilterContent);
     }
 
-
-public void CarAgencySwitch(){
-
-    for (int i = 0 ; i < ReadWriteData.vechicles_Content.size(); i++){
-
-                    if (ReadWriteData.vechicles_Content.get(i).getCarAgency().equals(caragencybox.getValue())){
-                        carAgencyFilterContent.add(ReadWriteData.vechicles_Content.get(i));
-                    }
-        }
-                        sceneLoader.makefadeout(rootPane, "caragency.fxml");
-                        System.out.println(carAgencyFilterContent);
-
-}
-
-public void searchSwitch(){
-
-
-    for (int i = 0 ; i < ReadWriteData.vechicles_Content.size(); i++){
-
-        if (ReadWriteData.vechicles_Content.get(i).getMake().equals(Search.getText())){
-            searchFilterContent.add(ReadWriteData.vechicles_Content.get(i));
-        }
-    }       sceneLoader.makefadeout(rootPane,"searcheScene.fxml");
-
-}
 
 
     public void Hover() {
@@ -181,21 +140,18 @@ public void searchSwitch(){
 
 
 
-    public void displayCarImage() {
+    public void displaysearchCars() {
 
-        for (Vehicle vehicle : ReadWriteData.vechicles_Content) {
-            int vId = vehicle.getVe_Id();
+        for (int i = 0; i < HomePageController.searchFilterContent.size(); i++) {
+            Vehicle vehicle = HomePageController.searchFilterContent.get(i);
             String photoPath = vehicle.getPhoto();
             String Price = vehicle.getPrice();
             String caragency = vehicle.getCarAgency();
             Image image = new Image(new File(photoPath).toURI().toString());
 
-            if (vId >= 0 && vId < carImageViewsList.size()) {
-                carImageViewsList.get(vId).setImage(image);
-                PriceLabelList.get(vId).setText(Price);
-                CarLabelList.get(vId).setText(caragency);
-            }
-
+            carImageViewsList.get(i).setImage(image);
+            PriceLabelList.get(i).setText(Price);
+            CarLabelList.get(i).setText(caragency);
         }
     }
 
@@ -203,9 +159,4 @@ public void searchSwitch(){
 
 
 
-
 }
-
-
-
-

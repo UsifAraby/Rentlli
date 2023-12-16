@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1280.0" stylesheets="homebuttons.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrental.SearchSceneController">
+    <children>
+        <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../homepage%20small%20layout.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="-2.0" layoutY="237.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Personal information           &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="carAgencyButton" layoutX="-2.0" layoutY="327.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="car Agencys                         &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button layoutX="-1.0" layoutY="410.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Reservation History             &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button layoutY="484.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="355.0" stylesheets="@homebuttons.css" text="Compare Cars                     &gt;" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <ScrollPane fx:id="scrollPane" layoutX="373.0" layoutY="88.0" prefHeight="700.0" prefWidth="902.0" style="-fx-background-color: transparent;" styleClass="scrollPane" stylesheets="@homebuttons.css">
+            <content>
+                <GridPane fx:id="gridPane" prefHeight="1485.0" prefWidth="888.0" style="-fx-background-color: transparent;" styleClass="gridPane">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="294.2000030517578" minHeight="10.0" prefHeight="294.2000030517578" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="368.4" minHeight="10.0" prefHeight="286.39997558593757" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="288.0000244140625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="288.0000244140625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="288.0000244140625" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100; -fx-scale-x: 1; -fx-scale-y: 1;" width="235.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle5" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Rectangle fx:id="rectangle6" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car1" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car2" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car3" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car4" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car5" fitHeight="178.0" fitWidth="242.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car6" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="view0" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="view1" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="view2" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="view3" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="view4" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="view5" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Rectangle fx:id="rectangle7" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car7" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Button fx:id="view6" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Rectangle fx:id="rectangle8" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car8" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Button fx:id="view7" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Rectangle fx:id="rectangle9" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car9" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Button fx:id="view8" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Rectangle fx:id="rectangle10" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car10" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Button fx:id="view9" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Rectangle fx:id="rectangle11" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car11" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Button fx:id="view10" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Rectangle fx:id="rectangle12" arcHeight="5.0" arcWidth="5.0" fill="#3395ff" height="226.0" onDragDetected="#Hover" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 100; -fx-arc-height: 100;" width="235.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="car12" fitHeight="169.0" fitWidth="235.0" onDragDetected="#Hover" pickOnBounds="true" preserveRatio="true" translateY="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Button fx:id="view11" mnemonicParsing="false" onAction="#ViewButtonClicked" prefHeight="31.0" prefWidth="55.0" styleClass="view" stylesheets="@viewButtons.css" text="View" textFill="WHITE" translateX="70.0" translateY="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="label0" text="35$" translateX="50.0" translateY="80.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label1" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label2" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label3" text="Label" translateX="50.0" translateY="80.0" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label4" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label5" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label6" text="Label" translateX="50.0" translateY="80.0" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label7" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label8" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label9" text="Label" translateX="50.0" translateY="80.0" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label10" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label11" text="Label" translateX="50.0" translateY="80.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency0" stylesheets="@viewlabels.css" text="Label0" translateX="100.0" translateY="-80.0">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency1" stylesheets="@viewlabels.css" text="Label1" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency2" stylesheets="@viewlabels.css" text="Label2" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency3" stylesheets="@viewlabels.css" text="Label3" translateX="100.0" translateY="-80.0" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency4" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency5" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency6" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency7" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency8" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency9" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency10" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="agency11" stylesheets="@viewlabels.css" text="Label" translateX="100.0" translateY="-80.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+        <ImageView fitHeight="153.0" fitWidth="881.0" layoutX="367.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../searchbar.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="94.0" fitWidth="181.0" layoutX="-29.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../user%20icon.png" />
+            </image>
+        </ImageView>
+        <ComboBox fx:id="caragencybox" layoutX="194.0" layoutY="347.0" opacity="0.0" prefWidth="150.0" />
+        <TextField fx:id="Search" layoutX="405.0" layoutY="21.0" prefHeight="38.0" prefWidth="739.0" promptText="Search" stylesheets="@textfields.css">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </TextField>
+        <Button fx:id="searchButton" layoutX="1123.0" layoutY="23.0" mnemonicParsing="false" stylesheets="@buttons.css" text="search">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
